@@ -1,0 +1,40 @@
+{
+	"name": "codeanimu",
+	"version": "1.0.0",
+	"description": "-",
+	"homepage": "http://codeanimu.net",
+	"private": true,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/DakuTree/website.git"
+	},
+	"author" : {
+		"name" : "Daku",
+		"url" : "http://codeanimu.net"
+	},
+	"production" : "http://codeanimu.net",
+	"dependencies" : {
+		"grunt" : "latest",
+		"grunt-bower-task" : "latest",
+		"grunt-contrib-cssmin" : "latest",
+		"grunt-contrib-clean" : "latest",
+		"grunt-contrib-copy" : "latest",
+		"grunt-contrib-less": "latest",
+		"grunt-contrib-watch" : "latest",
+		"grunt-rename" : "latest",
+		"grunt-env" : "latest",
+		"grunt-preprocess" : "latest",
+		"grunt-contrib-compress" : "latest",
+
+		"strip-json-comments": "latest",
+		"jsonlint": "latest"
+	},
+	"scripts" : {
+		"bower" : "grunt bower",
+		"dev" : "grunt",
+		"grunt" : "grunt",
+		"prod" : "grunt prod",
+		"watch" : "grunt watch",
+		"update" : "grunt bower rename"
+	}
+}

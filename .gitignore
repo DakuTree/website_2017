@@ -1,0 +1,13 @@
+#ignore
+node_modules
+npm-debug.log
+
+dev/assets/img
+prod/assets/img
+vendor/
+
+#temp ignore
+dev/
+prod/
+
+#allow
