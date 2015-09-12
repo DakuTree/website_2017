@@ -24,10 +24,7 @@
 		"grunt-rename" : "latest",
 		"grunt-env" : "latest",
 		"grunt-preprocess" : "latest",
-		"grunt-contrib-compress" : "latest",
-
-		"strip-json-comments": "latest",
-		"jsonlint": "latest"
+		"grunt-contrib-compress" : "latest"
 	},
 	"scripts" : {
 		"bower" : "grunt bower",
