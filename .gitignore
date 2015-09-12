@@ -4,10 +4,13 @@ npm-debug.log
 
 dev/assets/img
 prod/assets/img
-vendor/
+build/files/vendor/css/*
+build/files/vendor/js/*
 
 #temp ignore
 dev/
 prod/
 
+
 #allow
+!build/files/vendor/js/texttype.js
