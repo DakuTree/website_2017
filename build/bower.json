@@ -5,7 +5,10 @@
 		"less": "2.x",
 
 		"normalize-css": "~3",
-		"html5bp": "git@github.com:h5bp/html5-boilerplate.git"
+		"html5bp": "git@github.com:h5bp/html5-boilerplate.git",
+
+		"jquery": "1.11.3",
+		"livequery": "git@github.com:brandonaaron/livequery.git"
 	},
 	"exportsOverride": {
 		"html5shiv": {
@@ -20,6 +23,12 @@
 		},
 		"html5bp": {
 			"../css/": "dist/css/main.css"
+		},
+		"jquery": {
+			"../js/": "dist/jquery.js"
+		},
+		"livequery": {
+			"../js/": "jquery.livequery.js"
 		}
 	}
 }
