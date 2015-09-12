@@ -112,7 +112,7 @@ module.exports = function(grunt){
 					ver: '<%= ver %>',
 					version: '<%= pkg.version %>',
 
-					google_analytics_id: "'UA-30896979-2'"
+					google_analytics_id: "'UA-30896979-1'"
 				},
 			},
 
