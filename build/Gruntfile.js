@@ -98,6 +98,24 @@ module.exports = function(grunt){
 			}
 		},
 
+		/*----------------------------------(    UGLIFY  )----------------------------------*/
+		uglify: {
+			prod: {
+				files: [
+					{
+						"../prod/assets/main.js" : "files/main.js"
+					},
+					{
+						expand: true,
+						cwd: 'files/vendor/js/',
+						src: '*.js',
+						dest: './files/vendor/js/',
+						ext:  '.min.js'
+					}
+				]
+			}
+		},
+
 		/*----------------------------------( PREPROCESS )----------------------------------*/
 
 		preprocess: {
@@ -113,7 +131,7 @@ module.exports = function(grunt){
 					ver: '<%= ver %>',
 					version: '<%= pkg.version %>',
 
-					google_analytics_id: "'UA-30896979-1'"
+					google_analytics_id: "UA-30896979-1"
 				},
 			},
 
@@ -208,6 +226,7 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-preprocess');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
@@ -225,6 +244,6 @@ module.exports = function(grunt){
 	grunt.registerTask('init', []);
 	grunt.registerTask('update', ['bower', 'rename']);
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'preprocess:dev', 'copy:dev']);
-	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'preprocess:prod', 'copy:prod']);
+	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
 	grunt.registerTask('default', ['dev']);
 };
