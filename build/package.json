@@ -4,14 +4,6 @@
 	"description": "-",
 	"homepage": "http://codeanimu.net",
 	"private": true,
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/DakuTree/website.git"
-	},
-	"author" : {
-		"name" : "Daku",
-		"url" : "http://codeanimu.net"
-	},
 	"production" : "http://codeanimu.net",
 	"dependencies" : {
 		"grunt" : "latest",
