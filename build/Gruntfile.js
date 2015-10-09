@@ -28,6 +28,11 @@ module.exports = function(grunt){
 			moveThat: {
 				src:  './files/vendor/css/main.css',
 				dest: './files/vendor/css/boilerplate.css'
+			},
+			moveThis: {
+				//fix for uglify bug
+				src:  './files/vendor/js/jquery.livequery.js',
+				dest: './files/vendor/js/livequery.js'
 			}
 		},
 
@@ -107,8 +112,8 @@ module.exports = function(grunt){
 					},
 					{
 						expand: true,
-						cwd: 'files/vendor/js/',
-						src: '*.js',
+						cwd:  'files/vendor/js/',
+						src:  '*.js',
 						dest: './files/vendor/js/',
 						ext:  '.min.js'
 					}
@@ -172,11 +177,11 @@ module.exports = function(grunt){
 						expand: true,
 						cwd: './files/',
 						src: [
-							'img/*.*',
 							'main.less',
 							'main.js',
 							'vendor/**/*.*',
-							'!vendor/**/*.min.css'
+							'!vendor/**/*.min.css',
+							'!vendor/**/*.min.js'
 						],
 						dest: '../dev/assets/'
 					},
@@ -199,7 +204,8 @@ module.exports = function(grunt){
 						cwd: './files/',
 						src: [
 							'img/*.*',
-							'vendor/**/*.min.*'
+							'vendor/**/*.min.*',
+							'vendor/fonts/*'
 							//'main.css' //main.css already exists in prod
 						],
 						dest: '../prod/assets/'
@@ -229,7 +235,7 @@ module.exports = function(grunt){
 			build : {
 				auth : {
 					host : "codeanimu.net",
-					port : "21", //set via settings.json
+					port : "21",
 					authKey : 'key'
 				},
 				src : '../prod/',
