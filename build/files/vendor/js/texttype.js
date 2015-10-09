@@ -7,7 +7,7 @@ function texttype(targetDiv, text, intervalStart, intervalRange, endTimeout, cal
 		this.init = function () {
 			var innerString = "";
 			for (var i = 0; i < text.length; i++) {
-				innerString += "<span style='display:none; color: #FFFFFF'>" + text[i] + "</span>"
+				innerString += "<span class='texttype-hidden'>" + text[i] + "</span>";
 			}
 			var pipe = document.createElement('span');
 			pipe.setAttribute('id', "pipe" + textTyperID);

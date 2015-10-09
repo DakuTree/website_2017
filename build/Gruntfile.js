@@ -38,6 +38,7 @@ module.exports = function(grunt){
 				'./files/main.less',
 				'./files/main.js',
 				'./files/templates/**/*',
+				'./vendor/**/*'
 			],
 			tasks: ['default'],
 		},
