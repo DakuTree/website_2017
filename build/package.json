@@ -6,18 +6,24 @@
 	"private": true,
 	"production" : "http://codeanimu.net",
 	"dependencies" : {
-		"grunt" : "latest",
+		"grunt"            : "latest",
 		"grunt-bower-task" : "latest",
-		"grunt-contrib-cssmin" : "latest",
-		"grunt-contrib-uglify" : "latest",
+		"grunt-rename"     : "latest",
+
+		"grunt-contrib-cssmin"   : "latest",
+		"grunt-contrib-uglify"   : "latest",
+		"grunt-contrib-less"     : "latest",
+		"grunt-contrib-compress" : "latest",
+
 		"grunt-contrib-clean" : "latest",
-		"grunt-contrib-copy" : "latest",
-		"grunt-contrib-less": "latest",
+		"grunt-contrib-copy"  : "latest",
 		"grunt-contrib-watch" : "latest",
-		"grunt-rename" : "latest",
-		"grunt-env" : "latest",
+
+		"grunt-env"        : "latest",
 		"grunt-preprocess" : "latest",
-		"grunt-contrib-compress" : "latest"
+
+		"grunt-ftpush" : "latest",
+		"grunt-open"   : "latest"
 	},
 	"scripts" : {
 		"bower" : "grunt bower",

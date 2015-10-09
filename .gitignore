@@ -3,6 +3,8 @@ node_modules
 npm-debug.log
 
 .idea/
+build/.grunt/
+build/.ftppass
 
 dev/assets/img
 prod/assets/img

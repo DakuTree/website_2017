@@ -217,6 +217,27 @@ module.exports = function(grunt){
 				],
 			},
 		},
+
+		/*----------------------------------( OPEN )----------------------------------*/
+		open : {
+			prod : {
+				path : "http://codeanimu.net"
+			}
+		},
+		/*----------------------------------( FTP )----------------------------------*/
+		ftpush : {
+			build : {
+				auth : {
+					host : "codeanimu.net",
+					port : "21", //set via settings.json
+					authKey : 'key'
+				},
+				src : '../prod/',
+				dest : "/", //this is codeanimu.net/web-front/
+				simple : true,
+				exclusions : ['**.DS_Store']
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-bower-task');
@@ -229,6 +250,8 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-preprocess');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-ftpush');
+	grunt.loadNpmTasks('grunt-open');
 
 	//----------------------------------
 
@@ -243,7 +266,10 @@ module.exports = function(grunt){
 
 	grunt.registerTask('init', []);
 	grunt.registerTask('update', ['bower', 'rename']);
+
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'preprocess:dev', 'copy:dev']);
 	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
+
+	grunt.registerTask('deploy', ['prod', 'ftpush', 'open:prod']);
 	grunt.registerTask('default', ['dev']);
 };
