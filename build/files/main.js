@@ -1,3 +1,4 @@
+/* jshint jquery:true*/
 $(function() {
 	// $('#slide-5 .bcg3 .wallpaper2').toggleClass('triggerNavIn'); //trigger animation
 
