@@ -6,7 +6,7 @@ module.exports = function(grunt){
 
 		/*----------------------------------( VERSIONING )----------------------------------*/
 
-		now: grunt.template.today('yyyymmdd'),
+		now: grunt.template.today('yyyy/mm/dd @ HH:MM:ss'),
 
 		/*----------------------------------( BOWER )----------------------------------*/
 

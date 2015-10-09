@@ -1,9 +1,10 @@
+		<div id="debug">Generated on <!-- @echo now -->.</div>
 
 		<!-- JAVASCRIPT BELOW -->
 		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
 		<script>less = {env: "development"};</script>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
-		<script>less.version || document.write('<script src="assets/vendor/js/less.min.js"><\/script>')</script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.js"></script>
+		<script>less.version || document.write('<script src="assets/vendor/js/less.js"><\/script>')</script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 		<script>window.jQuery || document.write('<script src="assets/vendor/js/jquery.js"><\/script>');</script>
@@ -12,13 +13,13 @@
 		<!-- @endif -->
 
 		<!-- @if NODE_ENV == 'PRODUCTION' -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="assets/vendor/js/jquery.min.js"><\/script>');</script>
 
 		<script src="assets/vendor/js/jquery.livequery.min.js"></script>
+		<script src="assets/vendor/js/texttype.js"></script>
 		<!-- @endif -->
 
-		<script src="assets/vendor/js/texttype.js"></script>
 		<script src="assets/main.js"></script>
 
 		<script>
