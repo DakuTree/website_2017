@@ -1,0 +1,205 @@
+<!-- @include includes/top.html -->
+		<div id="top" class="jumbotron" data-src="assets/img/highway_animation.gif" data-position="center right">
+			<div class="container">
+				<h1><!-- @echo resumeProfile.full_name--></h1>
+				<p class="lead">Interactive resume</p>
+			</div>
+
+			<div class="overlay"></div>
+
+			<a href="#profile" class="scroll-down">
+				<span class="glyphicon glyphicon-chevron-down"></span>
+			</a>
+		</div>
+
+		<nav class="navbar navbar-default" id="navbar-example" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#profile">Profile</a></li>
+					<li><a href="#experiences">Experiences</a></li>
+					<li><a href="#abilities">Abilities</a></li>
+					<!-- @if resumeProfile.projects.length > 0 --><li><a href="#projects">Projects</a></li><!-- @endif -->
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</nav>
+
+		<div class="background-white">
+			<div id="profile" class="container">
+				<h2>Profile</h2>
+				<!--<p class="lead">I&#039;m a creative PHP webdeveloper</p>-->
+
+				<hr />
+
+				<div class="row">
+					<div class="col-md-4">
+						<h3>About me</h3>
+						<p><!-- @echo resumeProfile.biography --></p>
+					</div>
+					<div class="col-md-4 text-center">
+						<img src="assets/img/profilePhoto.png" alt="<!-- @echo resumeProfile.full_name -->" width="246" height="246" />
+					</div>
+					<div class="col-md-4">
+						<h3>Details</h3>
+						<p>
+							<strong>Name:</strong><br /><!-- @echo resumeProfile.full_name -->
+							<br />
+
+							<strong>Age:</strong><br /><!-- @echo resumeProfile.age --> years old.
+							<br />
+
+							<strong>Location:</strong><br /><!-- @echo resumeProfile.location -->
+						</p>
+
+						<!-- @if resumeProfile.social.twitter !== '' -->
+						<a href="https://twitter.com/<!-- @echo resumeProfile.social.twitter -->" class="twitter-follow-button" data-show-count="false" data-size="large" data-show-screen-name="true">Follow @<!-- @echo resumeProfile.social.twitter --></a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						<!-- @endif -->
+						<!-- @if resumeProfile.social.github !== '' -->
+						<a class="github-button" href="https://github.com/<!-- @echo resumeProfile.social.github -->" aria-label="Follow @<!-- @echo resumeProfile.social.github --> on GitHub">Follow @<!-- @echo resumeProfile.social.github --></a>
+						<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+						<!-- @endif -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="experiences" class="container">
+			<h2>Experiences</h2>
+			<!--<p class="lead">&ldquo;Protons give an atom its identity, electrons its personality.&rdquo;<br />- Bill Bryson, A short history of nearly everything</p>-->
+
+			<hr />
+
+			<h3>Education</h3>
+			<!-- @include partials/education.html -->
+
+			<hr />
+
+			<h3>Careers</h3>
+			<!-- @include partials/career.html -->
+		</div>
+
+
+		<div class="background-white">
+			<div id="abilities" class="container">
+				<h2>Abilities</h2>
+				<!--<p class="lead">&ldquo;Life without knowledge is death in disguise.&rdquo;<br />- Talib Kweli</p>-->
+
+				<!-- TODO: Allow adding notes to each -->
+
+				<hr />
+
+				<h3>Skills</h3>
+				<!-- @include partials/skills.html -->
+
+				<hr />
+
+				<h3>Languages</h3>
+				<!-- @include partials/languages.html -->
+
+				<hr />
+
+				<h3>Tools</h3>
+				<!-- @include partials/tools.html -->
+			</div>
+		</div>
+
+		<!-- @if resumeProfile.projects.length > 0 -->
+		<div id="projects" class="container">
+			<h2>Projects</h2>
+			<!--<p class="lead">&ldquo;You can do anything you set your mind to.&rdquo;<br />- Benjamin Franklin</p>-->
+
+			<hr />
+
+			<!-- TODO: Generate rows -->
+			<!--<div class="row">
+				<div class="col-md-6 col-sm-12 col-xs-12">
+					<figure class="effect">
+						<img src="assets/img/project_img600x400.jpg" alt="Name" />
+
+						<figcaption>
+							<h3>Project Name</h3>
+							<p>Project Description</p>
+							<p><strong>Tags:</strong> <br />foo, bar</p>
+							<a href="http://linktoproject" target="_blank">View more</a> 
+							<span class="icon">
+								<span class="glyphicon glyphicon-new-window"></span>
+							</span>
+						</figcaption> 
+					</figure>
+				</div>
+			</div>-->
+		</div>
+		<!-- @endif -->
+
+
+
+		<div class="text-center project-referal">
+			This project is built with an open source framework originally<br>designed by <a href="http://www.pascalvangemert.nl/">Pascal van Gemert</a> in PHP and then ported by myself to Grunt.
+			<p>Generated on <!-- @echo now -->.</p>
+			<a href="https://github.com/DakuTree/resume" class="btn btn-primary" target="_blank">Forked Project (Grunt)</a>
+			<a href="https://github.com/pascalvgemert/resume" class="btn btn-primary" target="_blank">Original Project (PHP)</a>
+		</div>
+
+		<div class="background-gray">
+			<div id="contact" class="container">
+				<h2>Contact</h2>
+				<!--<p class="lead">&ldquo;If I had asked people what they wanted, they would have said faster horses. &rdquo;<br />- Henry Ford</p>-->
+
+				<hr />
+
+				<div class="row">
+					<!-- @if resumeProfile.social.email !== '' -->
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<a href="mailto:<!-- @echo resumeProfile.social.email -->"><span class="icon icon-email"></span><span style="unicode-bidi:bidi-override; direction: rtl;"><!-- @echo resumeProfile.social.email_reversed --></span></a>
+							</li>
+						</ul>
+					</div>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.twitter !== '' -->
+					<div class="col-md-6">
+						<ul class="no-bullets">
+							<li>
+								<a href="http://twitter.com/<!-- @echo resumeProfile.social.twitter -->" target="_blank"><span class="icon icon-twitter"></span>http://twitter.com/<!-- @echo resumeProfile.social.twitter --></a>
+							</li>
+						</ul>
+					</div>
+					<!-- @endif -->
+					<!-- TODO: Allow for additional social links -->
+				</div>
+			</div>
+		</div>
+
+		<!-- TODO: Footer with creation notes -->
+
+		<!-- END OF PAGE -->
+
+		<div class="modal fade" id="upgrade-dialog" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Your browser is out of date</h4>
+					</div>
+					<div class="modal-body">
+						<p>To get the best possible experience using our site we recommend that you upgrade to a modern web browser. To download a newer web browser click on the Upgrade button.</p>
+					</div>
+					<div class="modal-footer">
+						<a href="http://browsehappy.com/" target="_blank" class="btn btn-primary">Upgrade</a>
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+<!-- @include includes/bottom.html -->

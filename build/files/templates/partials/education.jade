@@ -1,0 +1,19 @@
+- if(resumeProfile.educations.length > 0) {
+div(class="experiences")
+	each education in resumeProfile.educations
+		div(class="experience row")
+			div(class="col-md-4")
+				h4= education.title
+				p(class="experience-period")= education.start_date +' - '+ education.end_date
+
+			div(class="col-md-8")
+				p
+					strong= education.level +' - '+ education.specification
+					span(class="hidden-phone")= education.description
+					span(class="experience-details")
+						span(class="location")
+							span(class="glyphicon glyphicon-map-marker")
+							= education.location
+- } else {
+div(class="alert alert-warning") No educations were found in this resume.
+- }

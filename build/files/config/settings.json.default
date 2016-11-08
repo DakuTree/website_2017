@@ -1,0 +1,11 @@
+{
+	"use_middle_name" : false,
+
+	"base_url" : "",
+	"google_analytics_id" : "",
+
+	"ftp_host" : "",
+	"ftp_port" : 22,
+	"ftp_dest" : "/"
+	//ftp auth is set in .ftppass
+}

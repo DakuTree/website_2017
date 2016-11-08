@@ -1,0 +1,36 @@
+{
+	"name" : "codeanimu",
+	"dependencies": {
+		"html5shiv": "3.x",
+		"less": "2.x",
+
+		"normalize-css": "~3",
+		"html5bp": "git@github.com:h5bp/html5-boilerplate.git",
+
+		"jquery": "1.11.3",
+		"bootstrap": "3.3.5"
+	},
+	"exportsOverride": {
+		"html5shiv": {
+			"../js/": "dist/html5shiv.js"
+		},
+		"less": {
+			"../js/": "dist/less.js"
+		},
+
+		"normalize-css": {
+			"../css/": "normalize.css"
+		},
+		"html5bp": {
+			"../css/": "dist/css/main.css"
+		},
+		"jquery": {
+			"../js/": "dist/jquery.js"
+		},
+		"bootstrap": {
+			"../js/":   "dist/js/bootstrap.js",
+			"../css/":  "dist/css/bootstrap.css",
+			"../fonts/": "dist/fonts/glyphicons-halflings-regular.*"
+		}
+	}
+}

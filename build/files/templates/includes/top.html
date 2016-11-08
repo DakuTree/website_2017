@@ -1,0 +1,40 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title><!-- @echo resumeProfile.full_name--> - Interactive Resume</title>
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<link rel="canonical" href="<!-- @echo resumeSettings.base_url -->">
+		<meta name="robots" content="index, follow" />
+		<meta name="revisit-after" content="14 days" />
+
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="<!-- @echo resumeProfile.full_name-->" />
+		<link type="text/plain" rel="author" href="<!-- @echo resumeSettings.base_url -->/humans.txt" />
+
+		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css" />
+		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
+		<link rel="stylesheet" href="assets/vendor/css/normalize.css">
+		<link rel="stylesheet" href="assets/vendor/css/boilerplate.css">
+		<link rel="stylesheet" href="assets/vendor/css/bootstrap.css">
+		<link rel="stylesheet/less" href="assets/main.less" />
+		<!-- @endif -->
+		<!-- @if NODE_ENV == 'PRODUCTION' -->
+		<link rel="stylesheet" href="assets/vendor/css/normalize.min.css">
+		<link rel="stylesheet" href="assets/vendor/css/boilerplate.min.css">
+		<link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/main.css">
+		<!-- @endif -->
+
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script>window.html5 || document.write('<script src="assets/js/vendor/html5shiv.js"><\/script>')</script>
+		<![endif]-->
+	</head>
+	<body data-spy="scroll" data-target="#navbar-example">

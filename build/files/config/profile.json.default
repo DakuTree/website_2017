@@ -1,0 +1,81 @@
+{
+	"first_name"  : "",
+	"middle_name" : "",
+	"last_name"   : "",
+
+	"biography" : "", //used for about me
+	"dateofbirth" : "YYYY/MM/DD",
+
+	"location" : "",
+
+	"educations" : [
+		// {
+			// "title" : "",
+			// "specification" : "",
+			// "location" : "",
+			// "level" : "",
+			// "description" : "",
+			// "start_date" : "XXXX-XX-XX",
+			// "end_date" : "XXXX-XX-XX",
+			// "completed" : true
+		// }
+	],
+
+	"careers" : [
+		// {
+			// "title": "",
+			// "specification": "",
+			// "location": "",
+			// "level": "",
+			// "description": "",
+			// "start_date": "YYYY-MM-DD",
+			// "end_date": null,
+			// "link": ""
+		// }
+	],
+
+	"skills" : [
+		// {
+			// "title" : "",
+			// "level" : 5,
+			// "level_detailed" : 10,
+			// "note" : ""
+		// }
+	],
+
+	"languages" : [
+		// {
+			// "title" : "",
+			// "level" : 5,
+			// "level_detailed" : 10,
+			// "note" : ""
+		// }
+	],
+
+	"tools" : [
+		// {
+			// "title" : "",
+			// "level" : 5,
+			// "level_detailed" : 10,
+			// "note" : ""
+		// }
+	],
+
+	"projects" : [
+		// {
+			// "title" : "",
+			// "description" : "",
+			// "tags" : "",
+			// "image" : "",
+			// "link" : ""
+		// }
+	],
+
+	"social" : {
+		"email"   : "",
+		"twitter" : "",
+		"github"  : ""
+		// "linkedin" : "",
+		// "facebook" : ""
+	}
+}

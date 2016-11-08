@@ -1,0 +1,15 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Angus Johnston (also known as Daku / DakuTree, Avareei) -- Creator/Admin -- @Avareei
+
+# THANKS
+	https://github.com/pascalvgemert/resume - Used the design here as a base.
+
+# TECHNOLOGY COLOPHON
+
+	HTML5, CSS3
+	Modernizr, LESS, jQuery, Bootstrap
+	Grunt (Modules: grunt-bower-task, grunt-contrib-cssmin, grunt-contrib-clean, grunt-contrib-copy, grunt-contrib-less, grunt-contrib-watch, grunt-rename, grunt-env, grunt-contrib-compress, grunt-preprocess, grunt-contrib-jade, strip-json-comments, jsonlint)

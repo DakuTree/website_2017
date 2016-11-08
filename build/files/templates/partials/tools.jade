@@ -1,0 +1,53 @@
+- if(resumeProfile.tools.length > 0) {
+	//TODO: Add ability for each thing to have a note.
+	- resumeProfile.tools.sort(function(a, b) {
+	-	var dLevel = b.level - a.level;
+	-	if(dLevel) return dLevel;
+	-
+	-	var dLevelDetailed = b.level_detailed - a.level_detailed;
+	- 	return dLevelDetailed;
+	- });
+
+	- var columnSize = Math.ceil(resumeProfile.tools.length / 2);
+	- var firstColumn = resumeProfile.tools.splice(0, columnSize);
+	- var secondColumn = resumeProfile.tools;
+
+	div(class="row")
+		div(class="col-md-6")
+			ul(class="no-bullets")
+				each tool in firstColumn
+					li
+						span(class="ability-title")= tool.title
+						span(class="ability-score")
+							- var filled = new Array(tool.level);
+							each tmp in filled
+								span(class="glyphicon glyphicon-star filled")
+
+							- if(tool.level < 5) {
+							- var notFilled = new Array(5 - tool.level);
+							each tmp in notFilled
+								span(class="glyphicon glyphicon-star")
+							- }
+						
+					
+		- if(columnSize >= 1) {
+		div(class="col-md-6")
+			ul(class="no-bullets")
+				each tool in secondColumn
+					li
+						span(class="ability-title")= tool.title
+						span(class="ability-score")
+							- var filled = new Array(tool.level);
+							each tmp in filled
+								span(class="glyphicon glyphicon-star filled")
+
+							- if(tool.level < 5) {
+							- var notFilled = new Array(5 - tool.level);
+							each tmp in notFilled
+								span(class="glyphicon glyphicon-star")
+							- }
+		- }
+
+- } else {
+div(class="alert alert-warning") No tools were found in this resume.
+- }
