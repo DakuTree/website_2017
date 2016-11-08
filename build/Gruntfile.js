@@ -234,30 +234,6 @@ module.exports = function(grunt){
 				],
 			},
 		},
-
-
-		/*----------------------------------( OPEN )----------------------------------*/
-		open : {
-			prod : {
-				path : null //this is set via settings.json
-			}
-		},
-		/*----------------------------------( FTP )----------------------------------*/
-		// Be sure to update the auth.host property to your hostname and update
-		// the .ftppass file with your FTP credentials
-		ftpush : {
-			build : {
-				auth : {
-					host : null, //set via settings.json
-					port : null, //set via settings.json
-					authKey : 'key'
-				},
-				src : '../prod/',
-				dest : null, //set via settings.json
-				simple : true,
-				exclusions : ['**.DS_Store']
-			}
-		},
 	});
 
 	grunt.loadNpmTasks('grunt-bower-task');
@@ -271,8 +247,6 @@ module.exports = function(grunt){
 	grunt.loadNpmTasks('grunt-preprocess');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-ftpush');
-	grunt.loadNpmTasks('grunt-open');
 
 	//----------------------------------
 
@@ -311,12 +285,6 @@ module.exports = function(grunt){
 		//make sure url doesn't end with slash
 		jsonSettings.base_url = (jsonSettings.base_url.slice(-1) == '/' ? jsonSettings.base_url.substr(0, -1) : jsonSettings.base_url);
 
-		//ftp settings
-		grunt.config.set('open.prod.path',         jsonSettings.base_url);
-		grunt.config.set('ftpush.build.auth.host', jsonSettings.ftp_host);
-		grunt.config.set('ftpush.build.auth.port', jsonSettings.ftp_port);
-		grunt.config.set('ftpush.build.dest',      jsonSettings.ftp_dest);
-
 		grunt.config.set('preprocess.options.context.resumeSettings', jsonSettings);
 		grunt.config.set('preprocess.options.context.resumeProfile',  jsonProfile);
 
@@ -329,15 +297,9 @@ module.exports = function(grunt){
 	grunt.registerTask('initial_setup', 'Setup', function(name, val) {
 		//initial setup, or used to reset settings
 
-		if(grunt.file.exists(".ftppass") || grunt.file.exists("files/config/profile.json") || grunt.file.exists("files/config/settings.json")) {
-			grunt.warn(".ftpass, profile.json or settings.json already exist.\nUsing force will overwrite them.\n");
+		if(grunt.file.exists("files/config/profile.json") || grunt.file.exists("files/config/settings.json")) {
+			grunt.warn("profile.json or settings.json already exist.\nUsing force will overwrite them.\n");
 		}
-
-		var ftppassBaseFile = ".ftppass.default";
-		if(grunt.file.exists(".ftppass.custom")) {
-			ftppassBaseFile = ".ftppass.custom";
-		}
-		grunt.file.copy(ftppassBaseFile, ".ftppass");
 
 		var profileBaseFile = "files/config/profile.json.default";
 		if(grunt.file.exists("files/config/profile.json.custom")) {
@@ -351,7 +313,7 @@ module.exports = function(grunt){
 		}
 		grunt.file.copy(settingsBaseFile, "files/config/settings.json");
 
-		grunt.log.writeln("\n.ftppass, profile.json & settings.json are now ready to be editted.");
+		grunt.log.writeln("\n.profile.json & settings.json are now ready to be editted.");
 	});
 
 	//main tasks
@@ -362,6 +324,5 @@ module.exports = function(grunt){
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'jade:compile', 'preprocess:dev', 'copy:dev']);
 	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
 
-	grunt.registerTask('deploy', ['prod', 'ftpush', 'open:prod']);
 	grunt.registerTask('default', ['dev']);
 };

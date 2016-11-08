@@ -1,10 +1,12 @@
 {
-	"name": "resume",
+	"name": "website",
 	"version": "1.0.0",
 	"description": "-",
 	"private": true,
 	"dependencies" : {
-		"grunt" : "latest",
+		"grunt" : "1.0.1",
+
+
 		"grunt-bower-task" : "latest",
 		"grunt-contrib-cssmin" : "latest",
 		"grunt-contrib-uglify" : "latest",
@@ -15,9 +17,6 @@
 		"grunt-rename" : "latest",
 		"grunt-env" : "latest",
 		"grunt-contrib-compress" : "latest",
-
-		"grunt-ftpush" : "latest",
-		"grunt-open" : "latest",
 
 		"grunt-preprocess" : "latest",
 		"grunt-contrib-jade" : "latest",
