@@ -13,3 +13,5 @@ The current site can be considered v1. It was built several years ago, and has o
 
 ##thanks
 See: [humans.txt](build/files/misc/humans.txt).
+
+	http://tympanus.net/Development/ItemTransitions/index2.html

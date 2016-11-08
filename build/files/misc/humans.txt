@@ -9,4 +9,4 @@
 
 # TECHNOLOGY COLOPHON
 	HTML5, CSS3
-	Modernizr, LESS
+	jQuery, Modernizr, LESS
