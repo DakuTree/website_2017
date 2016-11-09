@@ -1,40 +1,42 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content='width=device-width, initial-scale=1.0' />
 
-		<title><!-- @echo resumeProfile.full_name--> - Interactive Resume</title>
-		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-		<link rel="canonical" href="<!-- @echo resumeSettings.base_url -->">
-		<meta name="robots" content="index, follow" />
-		<meta name="revisit-after" content="14 days" />
+	<title>codeanimu.net</title>
 
-		<meta name="description" content="" />
-		<meta name="keywords" content="" />
-		<meta name="author" content="<!-- @echo resumeProfile.full_name-->" />
-		<link type="text/plain" rel="author" href="<!-- @echo resumeSettings.base_url -->/humans.txt" />
+	<meta name="description" content="">
+	<meta name="author" content="https://github.com/DakuTree/website/graphs/contributors" />
+	<link type="text/plain" rel="author" href="https://codeanimu.net/humans.txt" />
 
-		<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" type="text/css" />
-		<!-- @if NODE_ENV == 'DEVELOPMENT' -->
-		<link rel="stylesheet" href="assets/vendor/css/normalize.css">
-		<link rel="stylesheet" href="assets/vendor/css/boilerplate.css">
-		<link rel="stylesheet" href="assets/vendor/css/bootstrap.css">
-		<link rel="stylesheet/less" href="assets/main.less" />
-		<!-- @endif -->
-		<!-- @if NODE_ENV == 'PRODUCTION' -->
-		<link rel="stylesheet" href="assets/vendor/css/normalize.min.css">
-		<link rel="stylesheet" href="assets/vendor/css/boilerplate.min.css">
-		<link rel="stylesheet" href="assets/vendor/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/main.css">
-		<!-- @endif -->
+	<link rel="shortcut icon" href="https://codeanimu.net/favicon.ico">
 
-		<!--[if lt IE 9]>
-			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script>window.html5 || document.write('<script src="assets/js/vendor/html5shiv.js"><\/script>')</script>
-		<![endif]-->
-	</head>
-	<body data-spy="scroll" data-target="#navbar-example">
+
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- Global CSS -->
+	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- Plugins CSS -->
+	<link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+
+	<!-- github calendar css -->
+	<link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css"
+	/>
+	<!-- github acitivity css -->
+	<link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+
+	<!-- Theme CSS -->
+	<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target="#navbar-example">

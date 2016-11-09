@@ -21,7 +21,7 @@
 		},
 		"bootstrap": {
 			"../js/":   "dist/js/bootstrap.js",
-			"../css/":  "dist/css/bootstrap.css",
+			"../css/":  "dist/css/bootstrap*",
 			"../fonts/": "dist/fonts/glyphicons-halflings-regular.*"
 		}
 	}
