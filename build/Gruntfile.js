@@ -183,6 +183,14 @@ module.exports = function(grunt){
 							'misc/.htaccess'
 						],
 						dest: '../dev/'
+					},
+					{
+						expand: true,
+						cwd: './files/',
+						src: [
+							'assets/**'
+						],
+						dest: '../dev/'
 					}
 				],
 			},
