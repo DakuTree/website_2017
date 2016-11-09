@@ -130,6 +130,11 @@ module.exports = function(grunt){
 			},
 
 			dev: {
+				options: {
+					context: {
+						base_url: 'localhost/github/website/dev/'
+					}
+				},
 				files: [
 					{
 						expand: true,
@@ -168,9 +173,7 @@ module.exports = function(grunt){
 						src: [
 							'img/*.*',
 							'main.less',
-							'main.js',
-							'vendor/**/*.*',
-							'!vendor/**/*.min.css'
+							'main.js'
 						],
 						dest: '../dev/assets/'
 					},
@@ -188,7 +191,9 @@ module.exports = function(grunt){
 						expand: true,
 						cwd: './files/',
 						src: [
-							'assets/**'
+							'assets/**',
+							'vendor/**/*.*',
+							// '!vendor/**/*.min.css'
 						],
 						dest: '../dev/'
 					}

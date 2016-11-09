@@ -1,12 +1,11 @@
 {
 	"name" : "website",
 	"dependencies": {
-		"less": "~2.7.1",
-
-		"normalize-css": "~5",
-
 		"jquery": "~1.12.4",
-		"bootstrap": "~3.3.5"
+		"bootstrap": "~3.3.5",
+		"less": "~2.7.1",
+		"normalize-css": "~5",
+		"font-awesome" : "~4.6.3"
 	},
 	"exportsOverride": {
 		"less": {
@@ -17,12 +16,16 @@
 			"../css/": "normalize.css"
 		},
 		"jquery": {
-			"../js/": "dist/jquery.js"
+			"../js/": "dist/jquery.*"
 		},
 		"bootstrap": {
-			"../js/":   "dist/js/bootstrap.js",
+			"../js/":   "dist/js/bootstrap*",
 			"../css/":  "dist/css/bootstrap*",
 			"../fonts/": "dist/fonts/glyphicons-halflings-regular.*"
+		},
+		"font-awesome": {
+			"../css/"   : "css/*",
+			"../fonts/" : "fonts/*"
 		}
 	}
 }
