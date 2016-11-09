@@ -21,28 +21,6 @@ module.exports = function(grunt){
 			},
 		},
 
-		/*----------------------------------( RENAME )----------------------------------*/
-
-		//Because bower doesn't allow you to rename files :<
-		rename: {
-			moveThat: {
-				src:  './files/vendor/css/main.css',
-				dest: './files/vendor/css/boilerplate.css'
-			}
-		},
-
-		/*----------------------------------( WATCH )----------------------------------*/
-
-		watch: {
-			files: [
-				'./files/main.less',
-				'./files/main.js',
-				'./files/templates/**/*',
-				'./files/config/*'
-			],
-			tasks: ['default'],
-		},
-
 		/*----------------------------------( ENV )----------------------------------*/
 
 		env: {
@@ -194,7 +172,11 @@ module.exports = function(grunt){
 							'vendor/**/*.*',
 							'!vendor/**/*.min.css'
 						],
-						dest: '../dev/assets/'
+						dest: '../dev/assets/',
+						rename: function(dest, file) {
+							if(file == 'main.css') file = 'boilerplate.css';
+							return dest + file;
+						}
 					},
 					{
 						expand: true,
@@ -237,15 +219,13 @@ module.exports = function(grunt){
 	});
 
 	grunt.loadNpmTasks('grunt-bower-task');
-	grunt.loadNpmTasks('grunt-rename');
-	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-env');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-less');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-preprocess');
-	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	//----------------------------------
@@ -318,7 +298,7 @@ module.exports = function(grunt){
 
 	//main tasks
 	grunt.registerTask('init', ['load_config']);
-	grunt.registerTask('update', ['bower', 'rename']);
+	grunt.registerTask('update', ['bower']);
 	grunt.registerTask('setup', ['initial_setup', 'update']);
 
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'jade:compile', 'preprocess:dev', 'copy:dev']);

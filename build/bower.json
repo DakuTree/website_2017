@@ -1,28 +1,20 @@
 {
-	"name" : "codeanimu",
+	"name" : "website",
 	"dependencies": {
-		"html5shiv": "3.x",
-		"less": "2.x",
+		"less": "~2.7.1",
 
-		"normalize-css": "~3",
-		"html5bp": "git@github.com:h5bp/html5-boilerplate.git",
+		"normalize-css": "~5",
 
-		"jquery": "1.11.3",
-		"bootstrap": "3.3.5"
+		"jquery": "~1.12.4",
+		"bootstrap": "~3.3.5"
 	},
 	"exportsOverride": {
-		"html5shiv": {
-			"../js/": "dist/html5shiv.js"
-		},
 		"less": {
 			"../js/": "dist/less.js"
 		},
 
 		"normalize-css": {
 			"../css/": "normalize.css"
-		},
-		"html5bp": {
-			"../css/": "dist/css/main.css"
 		},
 		"jquery": {
 			"../js/": "dist/jquery.js"
