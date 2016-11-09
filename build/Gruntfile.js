@@ -1,4 +1,4 @@
-module.exports = function(grunt){
+module.exports = function (grunt) {
 	'use strict';
 
 	grunt.initConfig({
@@ -17,20 +17,20 @@ module.exports = function(grunt){
 					cleanup: true,                // Will clean target and bower directories.
 					copy: true,
 					layout: 'byComponent',        // Folder structure type.
-					verbose: true,                // Debug output.
-				},
-			},
+					verbose: true                // Debug output.
+				}
+			}
 		},
 
 		/*----------------------------------( ENV )----------------------------------*/
 
 		env: {
 			dev: {
-				NODE_ENV: 'DEVELOPMENT',
+				NODE_ENV: 'DEVELOPMENT'
 			},
 			prod: {
-				NODE_ENV: 'PRODUCTION',
-			},
+				NODE_ENV: 'PRODUCTION'
+			}
 		},
 
 		/*----------------------------------( CLEAN )----------------------------------*/
@@ -56,7 +56,7 @@ module.exports = function(grunt){
 					compress: true
 				},
 				files: {"./prod/assets/main.css": "files/less/styles.less"} /* There should be some cache control here */
-			},
+			}
 		},
 
 		/*----------------------------------( CSSMIN )----------------------------------*/
@@ -70,7 +70,10 @@ module.exports = function(grunt){
 				files: [{
 					expand: true,
 					cwd: './files/vendor/css/',
-					src: ['*.css', '!*.min.css'],
+					src: [
+						'*.css',
+						'!*.min.css'
+					],
 					dest: './files/vendor/css/',
 					ext: '.min.css'
 				}]
@@ -80,15 +83,15 @@ module.exports = function(grunt){
 		/*----------------------------------(    UGLIFY  )----------------------------------*/
 		uglify: {
 			prod: {
-				files: [{
-						"../prod/assets/main.js" : "files/main.js"
-					},
+				files: [
 					{
+						"../prod/assets/main.js": "files/main.js"
+					}, {
 						expand: true,
 						cwd: 'files/vendor/js/',
 						src: '*.js',
 						dest: './files/vendor/js/',
-						ext:  '.min.js'
+						ext: '.min.js'
 					}
 				]
 			}
@@ -100,15 +103,15 @@ module.exports = function(grunt){
 				options: {
 					pretty: '\t'
 					// data: {
-						// debug: false
+					// debug: false
 					// }
 				},
 				files: {
-					"./files/templates/partials/education.html" : "./files/templates/partials/education.jade",
-					"./files/templates/partials/career.html"    : "./files/templates/partials/career.jade",
-					"./files/templates/partials/skills.html"    : "./files/templates/partials/skills.jade",
-					"./files/templates/partials/languages.html" : "./files/templates/partials/languages.jade",
-					"./files/templates/partials/tools.html"     : "./files/templates/partials/tools.jade",
+					"./files/templates/partials/education.html": "./files/templates/partials/education.jade",
+					"./files/templates/partials/career.html": "./files/templates/partials/career.jade",
+					"./files/templates/partials/skills.html": "./files/templates/partials/skills.jade",
+					"./files/templates/partials/languages.html": "./files/templates/partials/languages.jade",
+					"./files/templates/partials/tools.html": "./files/templates/partials/tools.jade"
 				}
 			}
 		},
@@ -126,7 +129,7 @@ module.exports = function(grunt){
 					production: '<%= pkg.production %>',
 					title: '<%= pkg.title %>',
 					version: '<%= pkg.version %>'
-				},
+				}
 			},
 
 			dev: {
@@ -135,31 +138,21 @@ module.exports = function(grunt){
 						base_url: 'http://localhost/github/website/dev/'
 					}
 				},
-				files: [
-					{
-						expand: true,
-						cwd: './files/templates/',
-						src: [
-							'index.html',
-							'!includes/**/*'
-						],
-						dest: '../dev/',
-					},
-				],
+				files: [{
+					expand: true,
+					cwd: './files/templates/',
+					src: ['index.html', '!includes/**/*'],
+					dest: '../dev/'
+				}]
 			},
 			prod: {
-				files: [
-					{
-						expand: true,
-						cwd: './files/templates/',
-						src: [
-							'index.html',
-							'!includes/**/*'
-						],
-						dest: '../prod/',
-					}
-				],
-			},
+				files: [{
+					expand: true,
+					cwd: './files/templates/',
+					src: ['index.html', '!includes/**/*'],
+					dest: '../prod/'
+				}]
+			}
 		},
 
 		/*----------------------------------( COPY )----------------------------------*/
@@ -176,8 +169,7 @@ module.exports = function(grunt){
 							'main.js'
 						],
 						dest: '../dev/assets/'
-					},
-					{
+					}, {
 						expand: true,
 						flatten: true,
 						cwd: './files/',
@@ -186,19 +178,18 @@ module.exports = function(grunt){
 							'misc/.htaccess'
 						],
 						dest: '../dev/'
-					},
-					{
+					}, {
 						expand: true,
 						cwd: './files/',
 						src: [
 							'assets/**',
 							'less/**',
-							'vendor/**/*.*',
+							'vendor/**/*.*'
 							// '!vendor/**/*.min.css'
 						],
 						dest: '../dev/'
 					}
-				],
+				]
 			},
 			prod: {
 				files: [
@@ -212,8 +203,7 @@ module.exports = function(grunt){
 							//'main.css' //main.css already exists in prod
 						],
 						dest: '../prod/assets/'
-					},
-					{
+					}, {
 						expand: true,
 						flatten: true,
 						cwd: './files/',
@@ -223,9 +213,9 @@ module.exports = function(grunt){
 						],
 						dest: '../prod/'
 					}
-				],
-			},
-		},
+				]
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-bower-task');
@@ -249,9 +239,9 @@ module.exports = function(grunt){
 
 	//----------------------------------
 
-	grunt.registerTask('load_config', 'Load config files', function(name, val) {
+	grunt.registerTask('load_config', 'Load config files', function (name, val) {
 		var stripJsonComments = require("strip-json-comments");
-		var jsonlint = require("jsonlint");
+		var jsonlint          = require("jsonlint");
 
 		//TODO: Error checking.
 
@@ -259,13 +249,13 @@ module.exports = function(grunt){
 		var jsonProfile  = jsonlint.parse(stripJsonComments(grunt.file.read("files/config/profile.json")));
 
 		//create full_name var
-		jsonProfile.full_name = (jsonProfile.first_name + (jsonSettings.use_middle_name ? " "+jsonProfile.middle_name+" " : " ") + jsonProfile.last_name);
+		jsonProfile.full_name = (jsonProfile.first_name + (jsonSettings.use_middle_name ? " " + jsonProfile.middle_name + " " : " ") + jsonProfile.last_name);
 
 		//create age var
 		var today = new Date(),
 		    birthDate = new Date(jsonProfile.dateofbirth);
-		var age = today.getFullYear() - birthDate.getFullYear();
-		var m = today.getMonth() - birthDate.getMonth();
+		var age   = today.getFullYear() - birthDate.getFullYear();
+		var m     = today.getMonth() - birthDate.getMonth();
 		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) { age--; }
 		jsonProfile.age = age;
 
@@ -276,29 +266,28 @@ module.exports = function(grunt){
 		jsonSettings.base_url = (jsonSettings.base_url.slice(-1) == '/' ? jsonSettings.base_url.substr(0, -1) : jsonSettings.base_url);
 
 		grunt.config.set('preprocess.options.context.resumeSettings', jsonSettings);
-		grunt.config.set('preprocess.options.context.resumeProfile',  jsonProfile);
+		grunt.config.set('preprocess.options.context.resumeProfile', jsonProfile);
 
 		//FIXME: preprocess has extremely shoddy @foreach support, so we need to use jade instead :|
 		grunt.config.set('pug.options.data.resumeSettings', jsonSettings);
-		grunt.config.set('pug.options.data.resumeProfile',  jsonProfile);
+		grunt.config.set('pug.options.data.resumeProfile', jsonProfile);
 	});
 
-
-	grunt.registerTask('initial_setup', 'Setup', function(name, val) {
+	grunt.registerTask('initial_setup', 'Setup', function (name, val) {
 		//initial setup, or used to reset settings
 
-		if(grunt.file.exists("files/config/profile.json") || grunt.file.exists("files/config/settings.json")) {
+		if (grunt.file.exists("files/config/profile.json") || grunt.file.exists("files/config/settings.json")) {
 			grunt.warn("profile.json or settings.json already exist.\nUsing force will overwrite them.\n");
 		}
 
 		var profileBaseFile = "files/config/profile.json.default";
-		if(grunt.file.exists("files/config/profile.json.custom")) {
+		if (grunt.file.exists("files/config/profile.json.custom")) {
 			profileBaseFile = "files/config/profile.json.custom";
 		}
 		grunt.file.copy(profileBaseFile, "files/config/profile.json");
 
 		var settingsBaseFile = "files/config/settings.json.default";
-		if(grunt.file.exists("files/config/settings.json.custom")) {
+		if (grunt.file.exists("files/config/settings.json.custom")) {
 			settingsBaseFile = "files/config/settings.json.custom";
 		}
 		grunt.file.copy(settingsBaseFile, "files/config/settings.json");
