@@ -37,7 +37,7 @@ module.exports = function(grunt){
 
 		clean: {
 			options: {
-				force: true, // Allows for deletion of folders outside current working dir (CWD). Use with caution.
+				force: true // Allows for deletion of folders outside current working dir (CWD). Use with caution.
 			},
 			dev: [
 				'../dev/**/*'
@@ -55,8 +55,8 @@ module.exports = function(grunt){
 					cleancss: true,
 					compress: true
 				},
-				files: {"../prod/assets/main.css": "files/main.less"} /* There should be some cache control here */
-			}
+				files: {"./prod/assets/main.css": "files/less/styles.less"} /* There should be some cache control here */
+			},
 		},
 
 		/*----------------------------------( CSSMIN )----------------------------------*/
@@ -132,7 +132,7 @@ module.exports = function(grunt){
 			dev: {
 				options: {
 					context: {
-						base_url: 'localhost/github/website/dev/'
+						base_url: 'http://localhost/github/website/dev/'
 					}
 				},
 				files: [
@@ -192,6 +192,7 @@ module.exports = function(grunt){
 						cwd: './files/',
 						src: [
 							'assets/**',
+							'less/**',
 							'vendor/**/*.*',
 							// '!vendor/**/*.min.css'
 						],
