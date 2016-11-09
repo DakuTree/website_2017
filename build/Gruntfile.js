@@ -165,6 +165,9 @@ module.exports = function (grunt) {
 						cwd: './files/',
 						src: [
 							'img/*.*',
+							'less/**',
+							'vendor/**/*.*',
+							// '!vendor/**/*.min.css'
 							'main.less',
 							'main.js'
 						],
@@ -182,10 +185,7 @@ module.exports = function (grunt) {
 						expand: true,
 						cwd: './files/',
 						src: [
-							'assets/**',
-							'less/**',
-							'vendor/**/*.*'
-							// '!vendor/**/*.min.css'
+							'assets/**'
 						],
 						dest: '../dev/'
 					}
