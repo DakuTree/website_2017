@@ -22,11 +22,11 @@
 		"jsonlint"            : "~1.6.2"
 	},
 	"scripts" : {
-		"bower" : "grunt bower",
-		"dev" : "grunt",
-		"grunt" : "grunt",
-		"prod" : "grunt prod",
-		"watch" : "grunt watch",
+		"bower"  : "grunt bower",
+		"dev"    : "grunt",
+		"grunt"  : "grunt",
+		"prod"   : "grunt prod",
+		"watch"  : "grunt watch",
 		"update" : "grunt bower rename"
 	}
 }
