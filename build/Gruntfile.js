@@ -172,12 +172,7 @@ module.exports = function(grunt){
 							'vendor/**/*.*',
 							'!vendor/**/*.min.css'
 						],
-						dest: '../dev/assets/',
-						rename: function(dest, file) {
-							console.log(file);
-							if(file == 'main.css') file = 'boilerplate.css';
-							return dest + file;
-						}
+						dest: '../dev/assets/'
 					},
 					{
 						expand: true,
