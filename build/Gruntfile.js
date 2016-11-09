@@ -15,6 +15,7 @@ module.exports = function(grunt){
 				options: {
 					targetDir: './files/vendor',  // A directory where you want to keep your Bower packages.
 					cleanup: true,                // Will clean target and bower directories.
+					copy: true,
 					layout: 'byComponent',        // Folder structure type.
 					verbose: true,                // Debug output.
 				},
@@ -93,8 +94,8 @@ module.exports = function(grunt){
 			}
 		},
 
-		/*----------------------------------(    JADE    )----------------------------------*/
-		jade: {
+		/*----------------------------------(    PUG     )----------------------------------*/
+		pug: {
 			compile: {
 				options: {
 					pretty: '\t'
@@ -119,12 +120,11 @@ module.exports = function(grunt){
 				context: {
 					description: '<%= pkg.description %>',
 					homepage: '<%= pkg.homepage %>',
-					license: '<%= _.pluck(pkg.licenses, "type").join(", ") %>',
+					license: '<%= _.map(pkg.licenses, "type").join(", ") %>',
 					name: '<%= pkg.name %>',
 					now: '<%= now %>',
 					production: '<%= pkg.production %>',
 					title: '<%= pkg.title %>',
-					ver: '<%= ver %>',
 					version: '<%= pkg.version %>'
 				},
 			},
@@ -174,6 +174,7 @@ module.exports = function(grunt){
 						],
 						dest: '../dev/assets/',
 						rename: function(dest, file) {
+							console.log(file);
 							if(file == 'main.css') file = 'boilerplate.css';
 							return dest + file;
 						}
@@ -269,8 +270,8 @@ module.exports = function(grunt){
 		grunt.config.set('preprocess.options.context.resumeProfile',  jsonProfile);
 
 		//FIXME: preprocess has extremely shoddy @foreach support, so we need to use jade instead :|
-		grunt.config.set('jade.options.data.resumeSettings', jsonSettings);
-		grunt.config.set('jade.options.data.resumeProfile',  jsonProfile);
+		grunt.config.set('pug.options.data.resumeSettings', jsonSettings);
+		grunt.config.set('pug.options.data.resumeProfile',  jsonProfile);
 	});
 
 
@@ -301,7 +302,7 @@ module.exports = function(grunt){
 	grunt.registerTask('update', ['bower']);
 	grunt.registerTask('setup', ['initial_setup', 'update']);
 
-	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'jade:compile', 'preprocess:dev', 'copy:dev']);
+	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'pug:compile', 'preprocess:dev', 'copy:dev']);
 	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
 
 	grunt.registerTask('default', ['dev']);
