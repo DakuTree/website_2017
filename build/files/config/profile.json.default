@@ -19,66 +19,31 @@
 
 	"location" : "",
 
-	"educations" : [
-		// {
-			// "title" : "",
-			// "specification" : "",
-			// "location" : "",
-			// "level" : "",
-			// "description" : "",
-			// "start_date" : "XXXX-XX-XX",
-			// "end_date" : "XXXX-XX-XX",
-			// "completed" : true
-		// }
-	],
-
-	"careers" : [
-		// {
-			// "title": "",
-			// "specification": "",
-			// "location": "",
-			// "level": "",
-			// "description": "",
-			// "start_date": "YYYY-MM-DD",
-			// "end_date": null,
-			// "link": ""
-		// }
-	],
-
-	"skills" : [
-		// {
-			// "title" : "",
-			// "level" : 5,
-			// "level_detailed" : 10,
-			// "note" : ""
-		// }
-	],
-
-	"languages" : [
-		// {
-			// "title" : "",
-			// "level" : 5,
-			// "level_detailed" : 10,
-			// "note" : ""
-		// }
-	],
-
-	"tools" : [
-		// {
-			// "title" : "",
-			// "level" : 5,
-			// "level_detailed" : 10,
-			// "note" : ""
-		// }
-	],
-
-	"projects" : [
-		// {
-			// "title" : "",
-			// "description" : "",
-			// "tags" : "",
-			// "image" : "",
-			// "link" : ""
-		// }
-	]
+	"projects" : {
+		"featured" : null/*{
+			"title"       : "",
+			"tagline"     : "",
+			"description" : [],
+			"image"       : "",
+			"link"        : "",
+			"github"      : ""
+		}*/,
+		"featuredSub" : null/*[
+			{
+				"title"       : "",
+				"description" : [],
+				"image"       : "",
+				"link"        : "",
+				"github"      : ""
+			}
+		]*/,
+		"other" : null/*[
+			{
+				"title"       : "",
+				"description" : [],
+				"link"        : "",
+				"github"      : ""
+			}
+		]*/
+	}
 }

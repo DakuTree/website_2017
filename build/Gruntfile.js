@@ -135,7 +135,7 @@ module.exports = function (grunt) {
 			dev: {
 				options: {
 					context: {
-						base_url: 'http://localhost/github/website/dev/'
+						base_url: 'http://192.168.0.2/github/website/dev/'
 					}
 				},
 				files: [{

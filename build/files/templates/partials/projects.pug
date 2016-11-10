@@ -1,0 +1,62 @@
+if resumeProfile.projects.featured || resumeProfile.projects.featuredSub
+	section(class="latest section")
+		div(class="section-inner")
+			h2(class="content")="Latest Projects"
+	
+			div(class="content")
+				if resumeProfile.projects.featured
+					- var project = resumeProfile.projects.featured
+					div(class="item featured text-center")
+						h3(class="title")
+							a(href=project.link, target="_blank")=project.title
+						p(class="summary")=project.tagline
+						div(class="featured-image")
+							a(href=project.link, target="_blank")
+								img(class="img-responsive project-image", src=project.image, alt=project.title)/
+
+							//div(class="ribbon")
+							//	div(class="text")="New"
+
+						div(class="desc text-list")
+							each pText in project.description
+								p!=pText
+						a(class="btn btn-cta-secondary", href=project.github, target="_blank")
+							i(class="fa fa-github")
+							="View on Github"
+	
+				if resumeProfile.projects.featuredSub
+					hr(class="divider")/
+					each project in resumeProfile.projects.featuredSub
+						div(class="item row")
+							a(class="col-md-4 col-sm-4 col-xs-12", target="_blank", href=project.link)
+								//This content may change depending JSON
+								img(class="img-responsive project-image", src=project.image, alt=project.title)/
+							div(class="desc col-md-8 col-sm-8 col-xs-12")
+								h3(class="title")
+									a(href=project.link, target="_blank")=project.title
+								each pText in project.description
+									p!=pText
+								p
+									a(class="more-link", href=project.github, target="_blank")
+										i(class="fa fa-github")
+										="View on Github"
+
+if resumeProfile.projects.other
+	section(class="projects section")
+		div(class="section-inner")
+			h2(class="heading")="Other Projects"
+			div(class="content")
+				each project in resumeProfile.projects.other
+					//foreach
+					div(class="item")
+						h3(class="title")
+							a(href=project.link, target="_blank")=project.title
+						each pText in project.description
+							p(class="summary")!=pText
+						p
+							a(class="more-link", href=project.github, target="_blank")
+								i(class="fa fa-github")
+								="View on Github"
+				//a(class="btn btn-cta-secondary", href="#")
+				//	="More on CoderWall "
+				//	i(class="fa fa-chevron-right")
