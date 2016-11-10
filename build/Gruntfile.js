@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 		bower: {
 			install: {
 				options: {
-					targetDir: './files/vendor',  // A directory where you want to keep your Bower packages.
+					targetDir: './files/assets/vendor',  // A directory where you want to keep your Bower packages.
 					cleanup: true,                // Will clean target and bower directories.
 					copy: true,
 					layout: 'byComponent',        // Folder structure type.
@@ -162,18 +162,6 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: './files/',
-						src: [
-							'img/*.*',
-							'less/**',
-							'vendor/**/*.*',
-							// '!vendor/**/*.min.css'
-							'main.less',
-							'main.js'
-						],
-						dest: '../dev/assets/'
-					}, {
-						expand: true,
 						flatten: true,
 						cwd: './files/',
 						src: [
@@ -181,7 +169,8 @@ module.exports = function (grunt) {
 							'misc/.htaccess'
 						],
 						dest: '../dev/'
-					}, {
+					},
+					{
 						expand: true,
 						cwd: './files/',
 						src: [

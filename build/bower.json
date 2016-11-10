@@ -1,11 +1,17 @@
 {
 	"name" : "website",
 	"dependencies": {
-		"jquery": "~1.12.4",
-		"bootstrap": "~3.3.5",
-		"less": "~2.7.1",
-		"normalize-css": "~5",
-		"font-awesome" : "~4.6.3"
+		"jquery"          : "~1.12.4",
+		"bootstrap"       : "~3.3.5",
+		"less"            : "~2.7.1",
+		"normalize-css"   : "~5",
+		"font-awesome"    : "~4.6.3",
+		"github-activity" : "git@github.com:caseyscarborough/github-activity.git#v0.1.4"
+	},
+	"overrides": {
+		"github-activity" : {
+			"dependencies" : []
+		}
 	},
 	"exportsOverride": {
 		"less": {
@@ -26,6 +32,10 @@
 		"font-awesome": {
 			"../css/"   : "css/*",
 			"../fonts/" : "fonts/*"
+		},
+		"github-activity": {
+			"../css/" : "src/*.css",
+			"../js/"  : "src/*.js"
 		}
 	}
 }
