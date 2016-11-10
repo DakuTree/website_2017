@@ -3,7 +3,8 @@
 	"middle_name" : "",
 	"last_name"   : "",
 
-	"biography" : "", //used for about me
+	"tagline"     : "",
+	"biography"   : "", //used for about me
 	"dateofbirth" : "YYYY/MM/DD",
 
 	"social" : {
