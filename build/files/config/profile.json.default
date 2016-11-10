@@ -5,7 +5,6 @@
 
 	"tagline"     : "",
 	"biography"   : "", //used for about me
-	"dateofbirth" : "YYYY/MM/DD",
 
 	"social" : {
 		"email"         : "",
