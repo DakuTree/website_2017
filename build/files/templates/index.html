@@ -31,20 +31,7 @@
 				<!-- @include partials/generated/github.html -->
 			</div><!--//primary-->
 			<div class="secondary col-md-4 col-sm-12 col-xs-12">
-				<aside class="info aside section">
-					<div class="section-inner">
-						<h2 class="heading sr-only">Basic Information</h2>
-						<div class="content">
-							<ul class="list-unstyled">
-								<li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span><!-- @echo resumeProfile.location --></li>
-								<li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:<!-- @echo resumeProfile.social.email -->"><!-- @echo resumeProfile.social.email --></a></li>
-								<!-- @if resumeProfile.social.blog !== '' -->
-								<li><i class="fa fa-link"></i><span class="sr-only">Blog:</span><a href="<!-- @echo resumeProfile.social.blog -->"><!-- @echo resumeProfile.social.blog --></a></li>
-								<!-- @endif -->
-							</ul>
-						</div><!--//content-->
-					</div><!--//section-inner-->
-				</aside><!--//aside-->
+				<!-- @include partials/generated/info.html -->
 
 				<aside class="skills aside section">
 					<div class="section-inner">
@@ -110,21 +97,7 @@
 					</div><!--//section-inner-->
 				</aside><!--//section-->
 
-				<aside class="education aside section">
-					<div class="section-inner">
-						<h2 class="heading">Education</h2>
-						<div class="content">
-							<div class="item">
-								<h3 class="title"><i class="fa fa-graduation-cap"></i> MSc Psychology and Computer Science</h3>
-								<h4 class="university">University College London <span class="year">(2011-2012)</span></h4>
-							</div><!--//item-->
-							<div class="item">
-								<h3 class="title"><i class="fa fa-graduation-cap"></i> BSc Computer Science</h3>
-								<h4 class="university">University of Bristol <span class="year">(2008-2011)</span></h4>
-							</div><!--//item-->
-						</div><!--//content-->
-					</div><!--//section-inner-->
-				</aside><!--//section-->
+				<!-- @include partials/generated/education.html -->
 
 				<aside class="languages aside section">
 					<div class="section-inner">

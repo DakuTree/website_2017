@@ -1,0 +1,14 @@
+if resumeProfile.educations
+	aside(class="education aside section")
+		div(class="section-inner")
+			h2(class="heading")="Education"
+			div(class="content")
+				each education in resumeProfile.educations
+					div(class="item")
+						h3(class="title")
+							//i(class="fa fa-graduation-cap")
+							=education.course
+						h4(class="university")
+							=education.institution
+							if education.year
+								span(class="year")=" ("+education.year+")"

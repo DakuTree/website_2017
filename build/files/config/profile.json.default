@@ -45,5 +45,13 @@
 				"github"      : ""
 			}
 		]*/
-	}
+	},
+
+	"educations" : null/*[
+		{
+			"course"      : "",
+			"institution" : "",
+			"year"        : ""
+		}
+	]*/
 }

@@ -1,0 +1,18 @@
+aside(class="info aside section")
+	div(class="section-inner")
+		h2(class="heading sr-only")="Basic Information"
+		div(class="content")
+			ul(class="list-unstyled")
+				li
+					i(class="fa fa-map-marker")
+					span(class="sr-only")="Location:"
+					=resumeProfile.location
+				li
+					i(class="fa fa-envelope-o")
+					span(class="sr-only")="Email:"
+					a(href="mailto:"+resumeProfile.social.email)=resumeProfile.social.email
+				if resumeProfile.social.blog !== ''
+					li
+						i(class="fa fa-link")
+						span(class="sr-only")="Blog:"
+						a(href=resumeProfile.social.blog)=resumeProfile.social.blog
