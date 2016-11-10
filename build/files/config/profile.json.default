@@ -6,6 +6,17 @@
 	"biography" : "", //used for about me
 	"dateofbirth" : "YYYY/MM/DD",
 
+	"social" : {
+		"email"         : "",
+		"twitter"       : "",
+		"github"        : "",
+		"linkedin"      : "",
+		"googleplus"    : "",
+		"hackernews"    : "",
+		"stackoverflow" : "",
+		"blog"          : ""
+	},
+
 	"location" : "",
 
 	"educations" : [
@@ -69,13 +80,5 @@
 			// "image" : "",
 			// "link" : ""
 		// }
-	],
-
-	"social" : {
-		"email"   : "",
-		"twitter" : "",
-		"github"  : ""
-		// "linkedin" : "",
-		// "facebook" : ""
-	}
+	]
 }

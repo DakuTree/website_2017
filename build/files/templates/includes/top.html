@@ -45,16 +45,30 @@
 <!-- ******HEADER****** -->
 	<header class="header">
 		<div class="container">
-			<img class="profile-image img-responsive pull-left" src="assets/img/profile.png" alt="James Lee" />
+			<img class="profile-image img-responsive pull-left" src="assets/img/profile.png" alt="<!-- @echo resumeProfile.full_name-->" />
 			<div class="profile-content pull-left">
-				<h1 class="name">James Lee</h1>
+				<h1 class="name"><!-- @echo resumeProfile.full_name--></h1>
 				<h2 class="desc">Web App Developer</h2>
 				<ul class="social list-inline">
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					<li><a href="#"><i class="fa fa-github-alt"></i></a></li>
-					<li class="last-item"><a href="#"><i class="fa fa-hacker-news"></i></a></li>
+					<!-- @if resumeProfile.social.twitter !== '' -->
+					<li><a href="https://twitter.com/<!-- @echo resumeProfile.social.twitter -->"><i class="fa fa-twitter"></i></a></li>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.googleplus !== '' -->
+					<li><a href="https://plus.google.com/<!-- @echo resumeProfile.social.googleplus -->"><i class="fa fa-google-plus"></i></a></li>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.linkedin !== '' -->
+					<li><a href="https://linkedin.com/in/<!-- @echo resumeProfile.social.linkedin -->"><i class="fa fa-linkedin"></i></a></li>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.github !== '' -->
+					<li><a href="https://github.com/<!-- @echo resumeProfile.social.github -->"><i class="fa fa-github-alt"></i></a></li>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.stackoverflow !== '' -->
+					<li><a href="http://stackoverflow.com/users/<!-- @echo resumeProfile.social.stackoverflow -->/"><i class="fa fa-stack-overflow"></i></a></li>
+					<!-- @endif -->
+					<!-- @if resumeProfile.social.hackernews !== '' -->
+					<li><a href="https://news.ycombinator.com/user?id=<!-- @echo resumeProfile.social.hackernews -->"><i class="fa fa-hacker-news"></i></a></li>
+					<!-- @endif -->
+					<li class="last-item">&nbsp;</li>
 				</ul>
 			</div><!--//profile-->
 			<a class="btn btn-cta-primary pull-right" href="http://themes.3rdwavemedia.com/" target="_blank"><i class="fa fa-paper-plane"></i> Contact Me</a>
