@@ -155,9 +155,11 @@
 						<h2 class="heading sr-only">Basic Information</h2>
 						<div class="content">
 							<ul class="list-unstyled">
-								<li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>San Francisco, US</li>
-								<li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="#">jameslee@website.com</a></li>
-								<li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">http://www.website.com</a></li>
+								<li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span><!-- @echo resumeProfile.location --></li>
+								<li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="mailto:<!-- @echo resumeProfile.social.email -->"><!-- @echo resumeProfile.social.email --></a></li>
+								<!-- @if resumeProfile.social.blog !== '' -->
+								<li><i class="fa fa-link"></i><span class="sr-only">Blog:</span><a href="<!-- @echo resumeProfile.social.blog -->"><!-- @echo resumeProfile.social.blog --></a></li>
+								<!-- @endif -->
 							</ul>
 						</div><!--//content-->
 					</div><!--//section-inner-->
