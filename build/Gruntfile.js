@@ -106,9 +106,13 @@ module.exports = function (grunt) {
 					// debug: false
 					// }
 				},
-				files: {
-					"./files/templates/partials/generated/about.html": "./files/templates/partials/about.pug"
-				}
+				files: [{
+					expand: true,
+					cwd: './files/templates/partials/',
+					src : ['*.pug'],
+					dest: './files/templates/partials/generated/',
+					ext: '.html'
+				}]
 			}
 		},
 
