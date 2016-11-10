@@ -107,11 +107,7 @@ module.exports = function (grunt) {
 					// }
 				},
 				files: {
-					"./files/templates/partials/education.html": "./files/templates/partials/education.jade",
-					"./files/templates/partials/career.html": "./files/templates/partials/career.jade",
-					"./files/templates/partials/skills.html": "./files/templates/partials/skills.jade",
-					"./files/templates/partials/languages.html": "./files/templates/partials/languages.jade",
-					"./files/templates/partials/tools.html": "./files/templates/partials/tools.jade"
+					"./files/templates/partials/generated/about.html": "./files/templates/partials/about.pug"
 				}
 			}
 		},
@@ -239,14 +235,6 @@ module.exports = function (grunt) {
 
 		//create full_name var
 		jsonProfile.full_name = (jsonProfile.first_name + (jsonSettings.use_middle_name ? " " + jsonProfile.middle_name + " " : " ") + jsonProfile.last_name);
-
-		//create age var
-		var today = new Date(),
-		    birthDate = new Date(jsonProfile.dateofbirth);
-		var age   = today.getFullYear() - birthDate.getFullYear();
-		var m     = today.getMonth() - birthDate.getMonth();
-		if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) { age--; }
-		jsonProfile.age = age;
 
 		//create reversed email var
 		jsonProfile.social.email_reversed = (jsonProfile.social.email).split('').reverse().join('');

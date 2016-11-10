@@ -14,7 +14,7 @@ build/files/config/profile.json.custom
 build/files/config/settings.json
 build/files/config/settings.json.custom
 
-build/files/templates/partials/*.html
+build/files/templates/partials/generated/*
 
 build/files/vendor/css/*
 build/files/vendor/js/*

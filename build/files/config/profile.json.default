@@ -4,7 +4,7 @@
 	"last_name"   : "",
 
 	"tagline"     : "",
-	"biography"   : "", //used for about me
+	"biography"   : [], //used for about me
 
 	"social" : {
 		"email"         : "",
