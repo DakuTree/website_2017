@@ -55,28 +55,7 @@ module.exports = function (grunt) {
 					cleancss: true,
 					compress: true
 				},
-				files: {"./prod/assets/main.css": "files/less/styles.less"} /* There should be some cache control here */
-			}
-		},
-
-		/*----------------------------------( CSSMIN )----------------------------------*/
-
-		cssmin: {
-			options: {
-				shorthandCompacting: false,
-				roundingPrecision: 14
-			},
-			prod: {
-				files: [{
-					expand: true,
-					cwd: './files/vendor/css/',
-					src: [
-						'*.css',
-						'!*.min.css'
-					],
-					dest: './files/vendor/css/',
-					ext: '.min.css'
-				}]
+				files: {"../prod/assets/main.min.css": "files/assets/main.less"} /* There should be some cache control here */
 			}
 		},
 
@@ -85,13 +64,7 @@ module.exports = function (grunt) {
 			prod: {
 				files: [
 					{
-						"../prod/assets/main.js": "files/main.js"
-					}, {
-						expand: true,
-						cwd: 'files/vendor/js/',
-						src: '*.js',
-						dest: './files/vendor/js/',
-						ext: '.min.js'
+						"../prod/assets/main.min.js": "files/assets/main.js"
 					}
 				]
 			}
@@ -146,6 +119,11 @@ module.exports = function (grunt) {
 				}]
 			},
 			prod: {
+				options: {
+					context: {
+						base_url: 'http://192.168.0.2/github/website/prod/'
+					}
+				},
 				files: [{
 					expand: true,
 					cwd: './files/templates/',
@@ -165,8 +143,7 @@ module.exports = function (grunt) {
 						flatten: true,
 						cwd: './files/',
 						src: [
-							'misc/*',
-							'misc/.htaccess'
+							'misc/*'
 						],
 						dest: '../dev/'
 					},
@@ -174,7 +151,8 @@ module.exports = function (grunt) {
 						expand: true,
 						cwd: './files/',
 						src: [
-							'assets/**'
+							'assets/**',
+							'!assets/main.css'
 						],
 						dest: '../dev/'
 					}
@@ -184,21 +162,20 @@ module.exports = function (grunt) {
 				files: [
 					{
 						expand: true,
-						cwd: './files/',
-						src: [
-							'img/*.*',
-							'vendor/**/*.min.*',
-							'vendor/fonts/*'
-							//'main.css' //main.css already exists in prod
-						],
-						dest: '../prod/assets/'
-					}, {
-						expand: true,
 						flatten: true,
 						cwd: './files/',
 						src: [
-							'misc/*',
-							'misc/.htaccess'
+							'misc/*'
+						],
+						dest: '../prod/'
+					},
+					{
+						expand: true,
+						cwd: './files/',
+						src: [
+							'assets/**',
+							'!assets/main.less',
+							'!assets/main.js'
 						],
 						dest: '../prod/'
 					}
@@ -211,7 +188,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-env');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-preprocess');
 	grunt.loadNpmTasks('grunt-contrib-pug');
@@ -282,7 +258,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('setup', ['initial_setup', 'update']);
 
 	grunt.registerTask('dev', ['init', 'env:dev', 'clean:dev', 'pug:compile', 'preprocess:dev', 'copy:dev']);
-	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'cssmin:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
+	grunt.registerTask('prod', ['dev', 'env:prod', 'clean:prod', 'less:prod', 'uglify:prod', 'preprocess:prod', 'copy:prod']);
 
 	grunt.registerTask('default', ['dev']);
 };
