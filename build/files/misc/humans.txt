@@ -2,7 +2,6 @@
 # The humans responsible & technology colophon
 
 # TEAM
-
 	Angus Johnston (also known as Daku / DakuTree, Avareei) -- Creator/Admin -- @Avareei
 
 # THANKS
@@ -11,5 +10,5 @@
 # TECHNOLOGY COLOPHON
 
 	HTML5, CSS3
-	Modernizr, LESS, jQuery, Bootstrap
-	Grunt (Modules: grunt-bower-task, grunt-contrib-cssmin, grunt-contrib-clean, grunt-contrib-copy, grunt-contrib-less, grunt-contrib-watch, grunt-rename, grunt-env, grunt-contrib-compress, grunt-preprocess, grunt-contrib-jade, strip-json-comments, jsonlint)
+	jQuery, Bootstrap, LESS, Normalize, Font-Awesome,  Google Fonts (Lato & Montserrat), Github-Activity, Github Calendar, Octicons, HTML5Shiv & Respond.js
+	Grunt (Modules: grunt-bower-task, grunt-contrib-cssmin, grunt-contrib-uglify, grunt-contrib-clean, grunt-contrib-copy, grunt-contrib-less, grunt-env, grunt-contrib-compress, grunt-preprocess, grunt-contrib-pug, strip-json-comments, jsonlint)
