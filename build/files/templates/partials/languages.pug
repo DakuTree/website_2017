@@ -1,0 +1,20 @@
+if resumeProfile.languages
+	aside(class="languages aside section")
+		div(class="section-inner")
+			h2(class="heading")="Languages"
+			div(class="content")
+				ul(class="list-unstyled")
+					each language in resumeProfile.languages
+						li(class="item")
+							span(class="title")
+								strong=language.language+": "
+								span(class="level")
+									=language.text+" "
+									br(class="visible-xs")/
+									- for(var i = language.level; i > 0; i-=2) {
+									- 	if(i !== 1) {
+									i(class="fa fa-star")
+									- 	} else {
+									i(class="fa fa-star-half")
+									- 	}
+									- }

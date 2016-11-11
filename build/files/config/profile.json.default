@@ -53,5 +53,13 @@
 			"institution" : "",
 			"year"        : ""
 		}
-	]*/
+	]*/,
+
+	"languages" : [
+		{
+			"language" : "English",
+			"text"     : "Native Speaker",
+			"level"    : 10
+		}
+	]
 }
