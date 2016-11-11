@@ -31,7 +31,7 @@
 				"A cross-site manga tracker written using PHP 7 & CodeIgniter 3.<br>Also uses jQuery, Bootstrap & Composer.",
 				"This aims to be an best way to track updates for manga across multiple sites and devices.<br>This works by doing screenscraping to grab all relevant info, then saving it locally to our own DB."
 			],
-			"image"       : "assets/img/projects/project-featured.png",
+			"image"       : "assets/img/projects/project-featured.gif",
 			"link"        : "https://trackr.moe",
 			"github"      : "https://github.com/DakuTree/manga-tracker"
 		},
@@ -42,7 +42,7 @@
 					"This uses grunt, preprocess, pug & a few JSON files to allow easy customization of the site.",
 					"The original design is by Xiaoying Riley and can be found at <a href='http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/'>3rdwavemedia.com</a>."
 				],
-				"image"       : "assets/img/projects/project-5.png",
+				"image"       : "assets/img/projects/codeanimu.gif",
 				"link"        : "https://codeanimu.net",
 				"github"      : "https://github.com/DakuTree/website/tree/new"
 			},
@@ -53,7 +53,7 @@
 					"Much like codeanimu.net this uses grunt, preprocess, pug & a few JSON files to allow easy customization of the site.<br>This also has multi-site support.",
 					"At the moment I have two sites that run this: <a href='https://holo.moe'>holo.moe</a> & <a href='https://ruri.moe'>ruri.moe</a>."
 				],
-				"image"       : "assets/img/projects/project-5.png",
+				"image"       : "assets/img/projects/shokesu.gif",
 				"link"        : "https://github.com/DakuTree/shokesu",
 				"github"      : "https://github.com/DakuTree/shokesu"
 			}
