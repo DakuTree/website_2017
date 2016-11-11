@@ -1,0 +1,16 @@
+# BLOCK bad ips
+deny from 177.9.115.185
+deny from 208.115.111.70
+deny from 91.207.8.62
+
+# No folder listings
+Options -Indexes
+
+# FORWARD old folders
+Redirect permanent /college /random/archive/college
+Redirect permanent /db /random/archive/db
+Redirect permanent /idm_bug /random/idm_bug
+Redirect permanent /mal_css /random/mal/mal_style
+Redirect permanent /mal/mal_css /random/mal/mal_style
+Redirect permanent /mal_precise /mal/mal_precise
+Redirect permanent /uploads /random/archive/uploads
