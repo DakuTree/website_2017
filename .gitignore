@@ -10,9 +10,7 @@ build/.ftppass
 build/.ftppass.custom
 
 build/files/config/profile.json
-build/files/config/profile.json.custom
 build/files/config/settings.json
-build/files/config/settings.json.custom
 
 build/files/templates/partials/generated/*
 

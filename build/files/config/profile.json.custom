@@ -1,0 +1,188 @@
+{
+	"first_name"  : "Angus",
+	"middle_name" : "William",
+	"last_name"   : "Johnston",
+
+	"tagline"     : "Web Developer",
+	"biography"   : [
+		"I am a self-taught programmer and have been for several years.",
+		"I started programming when I had an idea to improve an open-source application I used on a daily basis. This small project sparked my imagination of what is possible with programming and since then I have taught myself various languages, and created several open-source projects of my own."
+	],
+
+
+	"social" : {
+		"email"         : "angus@codeanimu.net",
+		"twitter"       : "Avareei",
+		"github"        : "DakuTree",
+		"linkedin"      : "",
+		"googleplus"    : "",
+		"hackernews"    : "",
+		"stackoverflow" : "1168377",
+		"blog"          : ""
+	},
+
+	"location" : "Edinburgh, Scotland, UK",
+
+	"projects" : {
+		"featured" : {
+			"title"       : "Manga Tracker",
+			"tagline"     : "A cross-site manga-tracker.",
+			"description" : [
+				"A cross-site manga tracker written using PHP 7 & CodeIgniter 3.<br>Also uses jQuery, Bootstrap & Composer.",
+				"This aims to be an best way to track updates for manga across multiple sites and devices.<br>This works by doing screenscraping to grab all relevant info, then saving it locally to our own DB."
+			],
+			"image"       : "assets/img/projects/project-featured.png",
+			"link"        : "https://trackr.moe",
+			"github"      : "https://github.com/DakuTree/manga-tracker"
+		},
+		"featuredSub" : [
+			{
+				"title"       : "codeanimu.net",
+				"description" : [
+					"This uses grunt, preprocess, pug & a few JSON files to allow easy customization of the site.",
+					"The original design is by Xiaoying Riley and can be found at <a href='http://themes.3rdwavemedia.com/website-templates/free-responsive-website-template-for-developers/'>3rdwavemedia.com</a>."
+				],
+				"image"       : "assets/img/projects/project-5.png",
+				"link"        : "https://codeanimu.net",
+				"github"      : "https://github.com/DakuTree/website/tree/new"
+			},
+			{
+				"title"       : "shokesu",
+				"description" : [
+					"Project to showcase various media of selected characters from anime/manga.",
+					"Much like codeanimu.net this uses grunt, preprocess, pug & a few JSON files to allow easy customization of the site.<br>This also has multi-site support.",
+					"At the moment I have two sites that run this: <a href='https://holo.moe'>holo.moe</a> & <a href='https://ruri.moe'>ruri.moe</a>."
+				],
+				"image"       : "assets/img/projects/project-5.png",
+				"link"        : "https://github.com/DakuTree/shokesu",
+				"github"      : "https://github.com/DakuTree/shokesu"
+			}
+		],
+
+		"other" : [
+			{
+				"title"       : "resume-gen",
+				"description" : [
+					"This is the predecessor to the code used for generating codeanimu.net. It was meant to be used more as a interactive resume rather than a personal site.",
+					"The original design is by Pascal van Gemert and can be found on <a href='https://github.com/pascalvgemert/resume'>Github</a>."
+				],
+				"link"        : "https://github.com/DakuTree/resume-gen",
+				"github"      : "https://github.com/DakuTree/resume-gen"
+			},
+			{
+				"title"       : "userscripts",
+				"description" : [
+					"These are various userscripts I've written over the years to make both mine and others lives a bit easier on certain sites. Either by improving UX or adding new functionality.",
+					"Some of these also use PHP+AJAX to allow features which would otherwise not be possible (I.E: Endless History, More Favourites, Different scoring system).",
+					"More specific information on each userscript can be found on the Github repo which is linked below."
+				],
+				"link"        : "https://greasyfork.org/en/users/2392-daku",
+				"github"      : "https://github.com/DakuTree/userscripts"
+			},
+			{
+				"title"       : "FTAG (Folder Tagger)",
+				"description" : [
+					"This is a personal project which is intended to be a manga/doujin manager which could easily be accessed on desktop & mobile.<br>It uses a combination of a forked Shimmie2 branch & a few perl scripts to make this work.",
+					"Due to how this project works, I really can't recommend it to other people as it requires a bunch of tweaking and setup to make it work properly as intended.",
+					"Despite the issues, this project shows some good examples of thinking outside the box to massively reduce time taken for what would otherwise be long tasks.",
+					"Other links: <a href='https://github.com/DakuTree/FTAGscripts'>FTAGscripts</a> | (Abandoned) <a href='https://github.com/DakuTree/FTAGclient'>FTAGclient</a>"
+				],
+				"link"        : "https://greasyfork.org/en/users/2392-daku",
+				"github"      : "https://github.com/DakuTree/userscripts"
+			},
+			{
+				"title"       : "shimmie2 (Contributor)",
+				"description" : [
+					"An booru-like imageboard written in PHP.",
+					"Shimmie is the project I have been working on the longest (5+ years).<br>Most of my contributions to this vary from quality of life improvements, to entire new features (post relationships, image history etc.).",
+					"Although I'm no longer actively working on the main project, it was still the thing which got me into programming, and I think that's worth a mention."
+				],
+				"link"        : "https://github.com/shish/shimmie2",
+				"github"      : "https://github.com/shish/shimmie2"
+			},
+			{
+				"title"       : "codeanimu.net (Old ver.)",
+				"description" : [
+					"This is the original design for my site. It used texttype.js & jQuery.livequery to create a site which appears to generate itself.",
+					"I thought this was a cool idea at first, then I saw what <a href='http://yourwebdev.ninja/generate.html'>other people</a> were doing."
+				],
+				"link"        : "https://github.com/DakuTree/website/tree/old",
+				"github"      : "https://github.com/DakuTree/website/tree/old"
+			}
+		]
+	},
+
+	"education" : [
+		{
+			"course"      : "HNC - Interactive Media (Web Development)",
+			"institution" : "Edinburgh College",
+			"year"        : "2014/09-2015/08"
+		},
+		{
+			"course"      : "NC - Digital Media Advanced",
+			"institution" : "Stevenson College",
+			"year"        : "2010/01-2010/06"
+		}
+	],
+
+	"skills" : {
+		"intro" : "",
+		"skills" : [
+			{
+				"name"       : "PHP",
+				"info"       : "5 years experience. Also have good knowledge of CodeIgniter.",
+				"levelText"  : "Pro",
+				"levelScore" : 80
+			},
+			{
+				"name"       : "Javascript",
+				"info"       : "6 years experience. I also actively develop userscripts..",
+				"levelText"  : "Pro",
+				"levelScore" : 75
+			},
+			{
+				"name"       : "Regex",
+				"info"       : "5 years experience. Probably my most useful non-programming skill.",
+				"levelText"  : "Pro",
+				"levelScore" : 75
+			},
+			{
+				"name"       : "HTML5, CSS3 & LESS",
+				"info"       : "4 years experience. Not much of a designer though..",
+				"levelText"  : "Knowledgeable",
+				"levelScore" : 70
+			},
+			{
+				"name"       : "MySQL & SQLite",
+				"info"       : "5 years experience.",
+				"levelText"  : "Knowledgeable",
+				"levelScore" : 70
+			},
+			{
+				"name"       : "Grunt",
+				"info"       : "1 year experience.",
+				"levelText"  : "Knowledgeable",
+				"levelScore" : 70
+			},
+			{
+				"name"       : "Perl",
+				"info"       : "4 years experience. Mainly used as my goto scripting language.",
+				"levelText"  : "Experienced",
+				"levelScore" : 55
+			}
+		]
+	},
+
+	"languages" : [
+		{
+			"language" : "English",
+			"text"     : "Native Speaker",
+			"level"    : 10
+		},
+		{
+			"language" : "Japanese",
+			"text"     : "2-3 Years of Night Classes",
+			"level"    : 2
+		}
+	]
+}
