@@ -1,7 +1,7 @@
 ## README
 This fork was made to allow easy customization of the free Bootstrap template "DEVELOPER" made by UX/UI designer [Xiaoying Riley](https://twitter.com/3rdwave_themes).  
 
-Although this was made really for personal use, it should be easy enough for others to use as well.
+Although this was made really for personal use, it should be easy enough for others to use as well.  
 Simply edit the .json files under build/files/config then run `grunt prod` in the build directory.
 
 ##Original Author & License
