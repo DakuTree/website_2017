@@ -121,7 +121,7 @@ module.exports = function (grunt) {
 			prod: {
 				options: {
 					context: {
-						base_url: 'http://192.168.0.2/github/website/prod/'
+						base_url: 'https://codeanimu.net/'
 					}
 				},
 				files: [{
