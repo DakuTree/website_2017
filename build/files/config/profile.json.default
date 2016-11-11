@@ -47,7 +47,7 @@
 		]*/
 	},
 
-	"educations" : null/*[
+	"education" : null/*[
 		{
 			"course"      : "",
 			"institution" : "",
