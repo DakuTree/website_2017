@@ -1,0 +1,13 @@
+aside(class="skills aside section")
+	div(class="section-inner")
+		h2(class="heading")="Skills"
+		div(class="content")
+			p(class="intro")=resumeProfile.skills.intro
+			div(class="skillset")
+				each skill in resumeProfile.skills.skills
+					div(class="item")
+						h3(class="level-title")
+							=skill.name
+							span(class="level-label", data-toggle="tooltip", data-placement="left", data-animation="true", tooltip=skill.info)=skill.levelText
+						div(class="level-bar")
+							div(class="level-bar-inner", data-level=skill.levelScore+"%")

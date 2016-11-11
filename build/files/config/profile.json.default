@@ -55,6 +55,19 @@
 		}
 	]*/,
 
+
+	"skills" : {
+		"intro" : "",
+		"skills" : [
+			/*{
+				"name"       : "",
+				"info"       : "",
+				"levelText"  : "",
+				"levelScore" : 80 //1-100
+			}*/
+		]
+	},
+
 	"languages" : [
 		{
 			"language" : "English",
