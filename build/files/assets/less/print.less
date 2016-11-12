@@ -1,0 +1,66 @@
+@media print {
+	//NOTE: Bootstrap already takes care of a lot of this, but it does some thing that are a bit eh, so we're resetting it here.
+
+	body {
+		background: #DAE3E7 !important;
+		color:      #434343 !important;
+	}
+	.header {
+		background: #f5f5f5 !important;
+		.profile-content .social a {
+			display: inline; //To keep URL on same line
+			background: none !important;
+
+			&:after {
+				content: attr(href); //No need for brackets here.
+				margin-left: 3px;
+			}
+		}
+	}
+	.section-inner, .gha-footer {
+		background: #FFF !important;
+	}
+	.footer {
+		background: darken(@color, 30%) !important;
+		color: #fff !important;
+
+		.copyright {
+			color: lighten(@color, 15%) !important;
+		}
+
+		a {
+			color: #fff !important;
+
+			&:after {
+				color: #FFF !important;
+			}
+		}
+		.fa-heart {
+			color: @heart !important;
+			&:before {
+				color: @heart !important;
+			}
+		}
+	}
+	.text-muted {
+		color: #777 !important;
+	}
+
+	.featured-image > a:after,
+	.latest .content > .item > a:not(.btn):after,
+	.projects .content > .item > h3 > a:after,
+	.gha-activity a:after, .gha-gravatar a:after, .gha-user-info > a:after,
+	.info .list-unstyled > li > .fa-envelope-o + span + a:after {
+		content: none; //There is already a text link here.
+	}
+
+	.skills .skillset {
+		.level-bar {
+			background: #E8E8E8 !important;
+		}
+		.level-bar-inner {
+			background: #66cb8c !important;
+		}
+	}
+}
+
