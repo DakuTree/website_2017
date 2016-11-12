@@ -1,6 +1,14 @@
 @media print {
-	//NOTE: Bootstrap already takes care of a lot of this, but it does some thing that are a bit eh, so we're resetting it here.
+	#ghfeed, .contrib-legend { display: none !important; }
+	html {
+		zoom: 220%;
+	}
+	@page {
+		size: 42cm/* 3150px*/;
+		margin: 0;
+	}
 
+	//NOTE: Bootstrap already takes care of a lot of this, but it does some thing that are a bit eh, so we're resetting it here.
 	body {
 		background: #DAE3E7 !important;
 		color:      #434343 !important;
@@ -44,6 +52,10 @@
 	}
 	.text-muted {
 		color: #777 !important;
+	}
+
+	b, strong, .university {
+		font-weight: 500 !important; //Bold looks weird in print
 	}
 
 	.featured-image > a:after,
