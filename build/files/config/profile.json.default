@@ -8,6 +8,7 @@
 
 	"social" : {
 		"email"         : "",
+		"phone"         : "",
 		"twitter"       : "",
 		"github"        : "",
 		"linkedin"      : "",
