@@ -2,7 +2,7 @@
 # The humans responsible & technology colophon
 
 # TEAM
-	Angus Johnston (also known as Daku / DakuTree, Avareei) -- Creator/Admin -- @Avareei
+	Angus Johnston (also known as Daku / DakuTree) -- Creator/Admin -- Github: @DakuTree, Twitter: @DakuTree
 
 # THANKS
 	https://github.com/xriley/Developer-Theme - This was used as base.

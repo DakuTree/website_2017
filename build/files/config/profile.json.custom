@@ -5,13 +5,14 @@
 
 	"tagline"     : "Web Developer",
 	"biography"   : [
-		"I'm a all around developer from Edinburgh, Scotland, UK.<br>I mainly work with web apps, but also like to make various scripts to make peoples lives easier in one way or another."
+		"I am a PHP developer based in Edinburgh, Scotland, UK.<br>I have been programming in some form or another for around six years, from writing scripts to developing websites.",
+		"I am a completely self-taught programmer. I originally started programming to improve upon a web app that somebody else had created, and this sparked my imagination on what was possible with programming. Since then I have learnt several programming languages and skills that have helped to expand my knowledge."
 	],
 
 
 	"social" : {
 		"email"         : "angus@codeanimu.net",
-		"twitter"       : "Avareei",
+		"twitter"       : "DakuTree",
 		"github"        : "DakuTree",
 		"linkedin"      : "",
 		"googleplus"    : "",
@@ -168,6 +169,12 @@
 				"info"       : "4 years experience. Mainly used as my goto scripting language.",
 				"levelText"  : "Experienced",
 				"levelScore" : 55
+			},
+			{
+				"name"       : "Apache",
+				"info"       : "5 year experience.",
+				"levelText"  : "Some Knowledge",
+				"levelScore" : 50
 			}
 		]
 	},
