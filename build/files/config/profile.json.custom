@@ -46,6 +46,20 @@
 				"image"       : "assets/img/projects/codeanimu.gif",
 				"link"        : "https://codeanimu.net",
 				"github"      : "https://github.com/DakuTree/website"
+			}
+		],
+
+		"other" : [
+			{
+				"title"       : "userscripts",
+				"description" : [
+					"These are various userscripts I've written over the years to make both mine and others lives a bit easier on certain sites. Either by improving UX or adding new functionality.",
+					"Some of these also use PHP+AJAX to allow features which would otherwise not be possible (I.E: Endless History, More Favourites, Different scoring system).",
+					"Across all my userscripts I have over 2000+ total installs",
+					"More specific information on each userscript can be found on the Github repo which is linked below."
+				],
+				"link"        : "https://greasyfork.org/en/users/2392-daku",
+				"github"      : "https://github.com/DakuTree/userscripts"
 			},
 			{
 				"title"       : "shokesu",
@@ -54,31 +68,18 @@
 					"Much like codeanimu.net this uses grunt, preprocess, pug & a few JSON files to allow easy customization of the site.<br>This also has multi-site support.",
 					"At the moment I have two sites that run this: <a href='https://holo.moe'>holo.moe</a> & <a href='https://ruri.moe'>ruri.moe</a>."
 				],
-				"image"       : "assets/img/projects/shokesu.gif",
 				"link"        : "https://github.com/DakuTree/shokesu",
 				"github"      : "https://github.com/DakuTree/shokesu"
-			}
-		],
-
-		"other" : [
-			{
-				"title"       : "resume-gen",
-				"description" : [
-					"This is the predecessor to the code used for generating codeanimu.net. It was meant to be used more as a interactive resume rather than a personal site.",
-					"The original design is by Pascal van Gemert and can be found on <a href='https://github.com/pascalvgemert/resume'>Github</a>."
-				],
-				"link"        : "https://github.com/DakuTree/resume-gen",
-				"github"      : "https://github.com/DakuTree/resume-gen"
 			},
 			{
-				"title"       : "userscripts",
+				"title"       : "shimmie2 (Contributor)",
 				"description" : [
-					"These are various userscripts I've written over the years to make both mine and others lives a bit easier on certain sites. Either by improving UX or adding new functionality.",
-					"Some of these also use PHP+AJAX to allow features which would otherwise not be possible (I.E: Endless History, More Favourites, Different scoring system).",
-					"More specific information on each userscript can be found on the Github repo which is linked below."
+					"An booru-like imageboard written in PHP.",
+					"Shimmie is the project I have been working on the longest (5+ years).<br>Most of my contributions to this vary from quality of life improvements, to entire new features (post relationships, image history etc.).",
+					"Although I'm no longer actively working on the main project, it was still the thing which got me into programming, and I think that's worth a mention."
 				],
-				"link"        : "https://greasyfork.org/en/users/2392-daku",
-				"github"      : "https://github.com/DakuTree/userscripts"
+				"link"        : "https://github.com/shish/shimmie2",
+				"github"      : "https://github.com/shish/shimmie2"
 			},
 			{
 				"title"       : "FTAG (Folder Tagger)",
@@ -92,14 +93,13 @@
 				"github"      : "https://github.com/DakuTree/FTAGscripts"
 			},
 			{
-				"title"       : "shimmie2 (Contributor)",
+				"title"       : "resume-gen",
 				"description" : [
-					"An booru-like imageboard written in PHP.",
-					"Shimmie is the project I have been working on the longest (5+ years).<br>Most of my contributions to this vary from quality of life improvements, to entire new features (post relationships, image history etc.).",
-					"Although I'm no longer actively working on the main project, it was still the thing which got me into programming, and I think that's worth a mention."
+					"This is the predecessor to the code used for generating codeanimu.net. It was meant to be used more as a interactive resume rather than a personal site.",
+					"The original design is by Pascal van Gemert and can be found on <a href='https://github.com/pascalvgemert/resume'>Github</a>."
 				],
-				"link"        : "https://github.com/shish/shimmie2",
-				"github"      : "https://github.com/shish/shimmie2"
+				"link"        : "https://github.com/DakuTree/resume-gen",
+				"github"      : "https://github.com/DakuTree/resume-gen"
 			},
 			{
 				"title"       : "codeanimu.net (Old ver.)",
