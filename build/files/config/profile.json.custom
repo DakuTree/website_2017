@@ -131,19 +131,19 @@
 			{
 				"name"       : "PHP",
 				"info"       : "5 years experience. Also have good knowledge of CodeIgniter.",
-				"levelText"  : "Pro",
+				"levelText"  : "Experienced",
 				"levelScore" : 80
 			},
 			{
-				"name"       : "Javascript",
+				"name"       : "Javascript + jQuery",
 				"info"       : "6 years experience. I also actively develop userscripts..",
-				"levelText"  : "Pro",
+				"levelText"  : "Experienced",
 				"levelScore" : 75
 			},
 			{
 				"name"       : "Regex",
 				"info"       : "5 years experience. Probably my most useful non-programming skill.",
-				"levelText"  : "Pro",
+				"levelText"  : "Experienced",
 				"levelScore" : 75
 			},
 			{
@@ -153,7 +153,7 @@
 				"levelScore" : 70
 			},
 			{
-				"name"       : "MySQL & SQLite",
+				"name"       : "MySQL/MariaDB & SQLite",
 				"info"       : "5 years experience.",
 				"levelText"  : "Knowledgeable",
 				"levelScore" : 70
@@ -165,14 +165,26 @@
 				"levelScore" : 70
 			},
 			{
+				"name"       : "CodeIgniter (MVC Framework)",
+				"info"       : "1 year experience. Know my way around it fairly well.",
+				"levelText"  : "Knowledgeable",
+				"levelScore" : 70
+			},
+			{
 				"name"       : "Perl",
 				"info"       : "4 years experience. Mainly used as my goto scripting language.",
-				"levelText"  : "Experienced",
+				"levelText"  : "Knowledgeable",
 				"levelScore" : 55
 			},
 			{
 				"name"       : "Apache",
 				"info"       : "5 year experience.",
+				"levelText"  : "Some Knowledge",
+				"levelScore" : 50
+			},
+			{
+				"name"       : "Linux",
+				"info"       : "",
 				"levelText"  : "Some Knowledge",
 				"levelScore" : 50
 			}
