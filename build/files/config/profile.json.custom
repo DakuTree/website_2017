@@ -44,7 +44,7 @@
 				],
 				"image"       : "assets/img/projects/codeanimu.gif",
 				"link"        : "https://codeanimu.net",
-				"github"      : "https://github.com/DakuTree/website/tree/new"
+				"github"      : "https://github.com/DakuTree/website"
 			},
 			{
 				"title"       : "shokesu",
@@ -87,8 +87,8 @@
 					"Despite the issues, this project shows some good examples of thinking outside the box to massively reduce time taken for what would otherwise be long tasks.",
 					"Other links: <a href='https://github.com/DakuTree/FTAGscripts'>FTAGscripts</a> | (Abandoned) <a href='https://github.com/DakuTree/FTAGclient'>FTAGclient</a>"
 				],
-				"link"        : "https://greasyfork.org/en/users/2392-daku",
-				"github"      : "https://github.com/DakuTree/userscripts"
+				"link"        : "https://github.com/DakuTree/FTAGscripts",
+				"github"      : "https://github.com/DakuTree/FTAGscripts"
 			},
 			{
 				"title"       : "shimmie2 (Contributor)",
