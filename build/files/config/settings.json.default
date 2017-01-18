@@ -1,5 +1,6 @@
 {
 	"use_middle_name" : false,
+	"use_photo" : false,
 
 	"base_url" : "",
 	"google_analytics_id" : ""

@@ -48,7 +48,9 @@
 <!-- ******HEADER****** -->
 	<header class="header">
 		<div class="container">
+			<!-- @if resumeSettings.use_photo -->
 			<img class="profile-image img-responsive img-circle pull-left" src="assets/img/profile.png" alt="<!-- @echo resumeProfile.full_name-->" />
+			<!-- @endif -->
 			<div class="profile-content pull-left">
 				<h1 class="name"><!-- @echo resumeProfile.full_name--></h1>
 				<h2 class="desc"><!-- @echo resumeProfile.tagline --></h2>
