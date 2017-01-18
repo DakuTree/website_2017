@@ -8,6 +8,6 @@ aside(class="skills aside section")
 					div(class="item")
 						h3(class="level-title")
 							=skill.name
-							span(class="level-label", data-toggle="tooltip", data-placement="left", data-animation="true", data-original-title=skill.info)=skill.levelText
-						div(class="level-bar")
+							// span(class="level-label", data-toggle="tooltip", data-placement="left", data-animation="true", data-original-title=skill.info)=skill.levelText
+						div(class="level-bar", title=(skill.levelText + ' - ' + skill.info))
 							div(class="level-bar-inner", data-level=skill.levelScore+"%")
